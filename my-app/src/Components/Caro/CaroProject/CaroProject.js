@@ -41,7 +41,7 @@ function CaroProject({ name, img, index, description, moreImages, gitLink, live 
 
           </div>
         </div>
-        <Card.Body>
+        <Card.Body className="card-body">
           <Card.Title>{name}</Card.Title>
           <div className="btns">
             <a href={gitLink} className="button">Git</a>

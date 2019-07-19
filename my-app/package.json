@@ -7,7 +7,6 @@
     "react": "^16.8.6",
     "react-animated-text": "^0.1.4",
     "react-bootstrap": "^1.0.0-beta.9",
-    "react-coverflow": "^0.2.20",
     "react-dom": "^16.8.6",
     "react-image-gallery": "^0.8.17",
     "react-parallax": "^2.2.0",
@@ -16,6 +15,7 @@
     "react-scripts": "3.0.1",
     "react-scroll-parallax": "^2.1.2",
     "react-scroll-up-button": "^1.6.4",
+    "react-scrollspy": "^3.4.0",
     "react-sticky-footer": "0.1.0-rc3",
     "reactstrap": "^8.0.0",
     "vertical-timeline-component-for-react": "^1.0.6"

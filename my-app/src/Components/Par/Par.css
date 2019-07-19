@@ -1,14 +1,12 @@
 
-    .logo{
-      position: absolute;
-      }
+  /*   navbar */
     .nabarBtns{
     display: flex;
+    cursor: pointer;
+    font-weight: bold;
     }
-    .navbarPointer{
-      cursor: pointer;
-      font-weight: bold;
-    }
+  
+ /*   parrlax section */
     .mainInfo{
     display: flex;              
     color: aliceblue;
@@ -16,6 +14,15 @@
     align-items: center;
     margin-top:2%;
 
+    }
+
+    .ul-navbar{
+        transition: all .33s ease-in-out;
+      
+    }
+    .ul-navbar:hover{
+            
+            transform: scale(1.29);
     }
    .title2{
     font-size: 6vh;
@@ -27,8 +34,8 @@
       font: normal normal bold 80px/normal "Creepster", Helvetica, sans-serif;
       color: rgba(255,255,255,1);
       text-align: center;         
-      text-overflow: clip;
-      text-shadow: 9px 9px 0 #2738cf  ;
+      text-overflow: clip;  
+      text-shadow: 9px 9px 0 #2B2B2B  ;
       transition: text-shadow 1500ms cubic-bezier(0.42, 0, 0.58, 1);
       }       
       .title:hover {
@@ -59,15 +66,11 @@
         }       
       
         .projectTitle::first-letter {
-           
-          color: #76bb7f;
-         
+          color: #76bb7f;     
          }  
 
-          h3 span{
-           
-          color: #61b8ff;
-         
+          h3 span{        
+          color: #61b8ff;      
          }  
          .social-network {
           -webkit-animation:social-network 1.5s both;

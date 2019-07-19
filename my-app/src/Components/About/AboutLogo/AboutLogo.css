@@ -19,10 +19,11 @@
     display: flex;
     justify-content: center;
     justify-content: space-evenly;
-    color: aliceblue;
+   
   }
-   .sort{
+   a.sort {
    cursor: pointer; 
+   color: #ffffff;
   }
   @keyframes App-logo-spin {
   from {

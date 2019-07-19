@@ -131,29 +131,39 @@ class Par extends Component {
             <Nav className="ml-auto" navbar>
               <div className="all">
                 <div className="nabarBtns">
-                  <div className="item1">
+                  
                     <NavItem>
-                      <NavLink className="navbarPointer">Home</NavLink>
+                    <div className="ul-navbar">
+                    <a className="ul-navbar">Home</a>
+                    </div>
+                   
                     </NavItem>
-                  </div>
-                  <div className="item2">
+                
                     <NavItem>
-                      <NavLink className="navbarPointer" onClick={() => { scrollToContent(this.MyStory, { offset: 0, align: 'top', duration: 1000 }) }}
-                      >About me</NavLink>
+                     <div className="ul-navbar">
+                     <a  onClick={() => { scrollToContent(this.MyStory, { offset: 0, align: 'top', duration: 1000 }) }}>About me</a>
+
+                     </div>
                     </NavItem>
-                  </div>
-                  <div className="item2">
+             
+                 
                     <NavItem>
-                      <NavLink className="navbarPointer" onClick={() => { scrollToContent2(this.MyStoryProjects, { offset: 0, align: 'top', duration: 1000 }) }}
-                      >My Projects</NavLink>
+                     
+                     <div className="ul-navbar">
+                     <a className="ul-navbar" onClick={() => { scrollToContent2(this.MyStoryProjects, { offset: 0, align: 'top', duration: 1000 }) }}>My Projects</a>
+
+                     </div>
+
                     </NavItem>
-                  </div>
-                  <div className="item2">
+                 
+              
                     <NavItem>
-                      <NavLink className="navbarPointer" onClick={() => { scrollToContent3(this.MyStoryEduction, { offset: 0, align: 'top', duration: 1000 }) }}
-                      >Eduction</NavLink>
+                    <div className="ul-navbar">
+                    <a className="ul-navbar" onClick={() => { scrollToContent3(this.MyStoryEduction, { offset: 0, align: 'top', duration: 1000 }) }}>Eduction</a>
+
+                    </div>
                     </NavItem>
-                  </div>
+              
                 </div>
               </div>
             </Nav>
