@@ -12,11 +12,11 @@ import ScrollUpButton from "react-scroll-up-button"; //Add this line Here
     bottomThreshold={40} 
     normalStyles={{
     backgroundColor: "#999999",
-    padding: "0.5rem"
+    padding: "0.2rem"
     }}
     stickyStyles={{
     backgroundColor: "rgba(255,255,255,.8)",
-    padding: "0.5rem"
+    padding: "0.50rem"
     }}
 >
     <div className="divFooter">

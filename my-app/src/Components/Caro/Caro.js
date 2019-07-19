@@ -1,41 +1,33 @@
 import React from 'react'
-import Coverflow from 'react-coverflow';
-import { Button,Card } from 'react-bootstrap';
-import CaroProject from '../Caro/CaroProject/CaroProject'
 import './Caro.css'
- function Caro({resumePortfolio,moreImages}) {
-  
-    return (
-        <div  >
-          <div className="list" >
+import CaroProject from '../Caro/CaroProject/CaroProject'
 
-           
-    {
- 
-      resumePortfolio.map((project,index)=> {
-   
-        return (
-          <div className="listProjects">
-      <CaroProject  
-           name = {project.name}
-           description={project.description}
-           img={project.imgurl}
-           index={index}
-           gitLinkGit={project.gitLinkGit}
-           moreImages={() =>{moreImages(index)}}
-         
-          />           
-          </div>  
-        )
-      })
-    
-    }
-     
-          </div>
- 
+function Caro({ resumePortfolio, moreImages }) {
 
-  
-        </div>
-    )
+  return (
+
+    <div className="list" >
+      {
+        resumePortfolio.map((project, index) => {
+          return (
+            <div className="listProjects" key={index}>
+              <CaroProject
+                name={project.name}
+                description={project.description}
+                img={project.imgurl}
+                index={index}
+                gitLink={project.gitLinkGit}
+                live={project.live}
+                moreImages={() => { moreImages(index) }}
+              />
+            </div>
+          )
+        })
+      }
+    </div>
+
+
+
+  )
 }
 export default Caro;

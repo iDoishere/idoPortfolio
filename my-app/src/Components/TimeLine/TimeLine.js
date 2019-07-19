@@ -1,5 +1,5 @@
 import React from 'react'
-import { Timeline, TimelineItem }  from 'vertical-timeline-component-for-react';
+import { Timeline }  from 'vertical-timeline-component-for-react';
 import TimeLineP from './TimeLineP/TimeLineP';
 
 
@@ -20,6 +20,7 @@ function TimeLine({education}) {
              time={info.Time}
              color = {info.Color}
              ifcolor = {info.ifColor}
+             key={index}
              />
            )   
          })

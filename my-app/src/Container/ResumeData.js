@@ -57,6 +57,7 @@ let resumeData = {
         "imgurl":"../images/todolist.png",
         "gitLinkGit":'https://github.com/iDoishere/googleMap-React',
         "role":"FRONT-END",
+        "live":"https://google--react.herokuapp.com/"
       },
       {
         "name":"Shopping Cart",
@@ -64,21 +65,34 @@ let resumeData = {
         "imgurl":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnOoTEgKPQ4LxOkOAtYrZh8Pa67BZEDA_GM82GzubnxZhTmPy4",
         "gitLinkGit":'https://github.com/iDoishere/ShoppingCart',
         "role":"FULL-STACK",
-      
+    
       },
       {
         "name":"Image Upload",
         "description":"user can upload images and view in a nice imageGallery",  
-        "imgurl":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnOoTEgKPQ4LxOkOAtYrZh8Pa67BZEDA_GM82GzubnxZhTmPy4",
-        "gitLinkGit":'https://github.com/iDoishere/image-hashTag',
-        "role":"FULL-STACK",
+         "gitLinkGit":'https://github.com/iDoishere/image-hashTag',
+         "role":"FULL-STACK",
       },
       {
         "name":"YoUTube Player",
         "description":"Youtube and songs data api requset,the songs will be played. ",
         "gitLinkGit":'https://github.com/iDoishere/youtube--redux',
         "role":"FRONT-END",
-      }
+        "live":" https://youtube--player.herokuapp.com/"
+      },
+      {
+        "name":"Chat App",
+        "description":"Users can Chat on real time - using Socket.io and Express",
+        "gitLinkGit":'https://github.com/iDoishere/Chat-App',
+        "role":"FRONT-END",
+        "live":"https://idochatapp.herokuapp.com"
+      },
+      // {
+      //   "name":"Chat-App",
+      //   "description":"users authentication , users can chat on real time - using Socket.io  ",
+      //   "gitLinkGit":'https://github.com/iDoishere/youtube--redux',
+      //   "role":"FRONT-END",
+      // }
     ],
   }
   

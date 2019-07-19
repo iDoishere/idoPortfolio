@@ -10,11 +10,12 @@ import youtubelogo from '../../images/youtubelogo.png'
 import firstimageupload from '../../images/firstimageupload.png' 
 import secimageupload from '../../images/secimageupload.png'
 import thirdimageupload from '../../images/thirdimageupload.png'
+import chat from '../../images/chatpic.png'
 
 
 import './ImageGallery.css'
 
-function ImageGalleryUi({finalImage,index}) {
+function ImageGalleryUi({ index}) {
     let photos=null;
     if(index === 0 ){
           photos = [
@@ -32,8 +33,8 @@ function ImageGalleryUi({finalImage,index}) {
           
             {
               src:  firstShoppingLogo ,
-              width: 4,
-              height: 3
+              width:1,
+              height: 1
             },
             {
               src:  secshoplogo ,
@@ -63,18 +64,18 @@ function ImageGalleryUi({finalImage,index}) {
       
         {
           src:  firstimageupload ,
-          width: 4,
-          height: 3
+          width:3,
+      height: 2
         },
         {
           src:  secimageupload ,
-          width: 1,
-          height: 1
+          width:3,
+          height: 2
         },
         {
           src:  thirdimageupload ,
-          width: 1 ,
-          height: 1
+          width:3,
+          height: 2
         } 
      
       ];
@@ -84,15 +85,24 @@ if(index===3){
   photos = [ 
     {
       src:  youtubelogo ,
-      width: 4,
-      height: 3
+      width:1,
+      height: 1
     },
   ];
 }
+if(index===4){
+  photos = [ 
+    {
+      src:  chat ,
+      width:1,
+      height: 1
+    },
+  ];
+ }
     return (
         <div>
 <Gallery photos={photos} /> 
-
+ 
         </div>
    
     )

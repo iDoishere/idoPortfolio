@@ -5,16 +5,27 @@
 
     .divFooter{
     font-size: 4vh;
+
     }
 
     .footerText::first-letter {        
     color: #76bb7f;
     font-size: 5vh;
+    font-weight: bold;
     }  
 
     p .span{  
     color: #61b8ff;
     font-size: 5vh;
     } 
+
+    @media screen and (max-width:800px){
+        .divFooter{
+            font-size: 2.5vh;
+            height: 63px;
+         
+            }
+        
+    }
 
      

@@ -73,7 +73,12 @@ a.button:hover {
 	color: black
 }
 .btns{
-	display: flex;justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
+ 
+}
+.button{
+	cursor: pointer;
 }
 @media screen and (max-width: 800px) {
 	div.title.card-title.h5{

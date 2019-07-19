@@ -1,9 +1,9 @@
 import React from 'react'
-import { Col, Container, Row } from 'reactstrap';
 import Plx from 'react-plx';
-import AboutLogo from '../About/AboutLogo/AboutLogo'
 import resume from '../../images/resume.pdf'
+import AboutLogo from './AboutLogo/AboutLogo'
 import './About.css'
+
 function About({ resumeData,sortProjects }) {
   const parallaxData = [
     {
@@ -49,7 +49,7 @@ function About({ resumeData,sortProjects }) {
           </div>
         </div>
       </div>
-      <AboutLogo sortProjects={sortProjects}/>    
+   <AboutLogo sortProjects={sortProjects}/>     
       <div>
       </div>
     </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Timeline, TimelineItem }  from 'vertical-timeline-component-for-react';
+import {  TimelineItem }  from 'vertical-timeline-component-for-react';
 import './TimeLineP.css'
 
 function TimeLineP({schoolName,specialization,achievements,time,color,achievements2,ifcolor}){

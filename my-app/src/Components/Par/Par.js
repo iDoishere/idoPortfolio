@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Parallax, Background } from 'react-parallax';
+import { Parallax} from 'react-parallax';
 
 import { Collapse, Navbar, NavbarToggler, Nav, NavItem, NavLink } from 'reactstrap';
 import './Par.css'
@@ -172,12 +172,12 @@ class Par extends Component {
             <div className='social-network'>
               <div className="try1">
                 <a href="https://www.linkedin.com/in/ido-cohen-32617816b/" rel="noopener noreferrer" target="_blank">
-                  <i class="fa fa-linkedin"  ></i>
+                  <i className="fa fa-linkedin"  ></i>
                 </a>
               </div>
               <div>
                 <a href="https://github.com/iDoishere?tab=repositories" rel="noopener noreferrer" target="_blank">
-                  <i class="fa fa-git-square"  ></i>
+                  <i className="fa fa-git-square"  ></i>
                 </a>
               </div>
             </div>
