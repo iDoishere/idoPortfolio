@@ -125,47 +125,31 @@ class Par extends Component {
       <div>
         <Navbar className="Navbar" color="light" light expand="md">
           <NavbarToggler onClick={this.toggleNavbar} />
-          <div className="logo">
-          </div>
+    
           <Collapse isOpen={this.state.collapsed} navbar>
             <Nav className="ml-auto" navbar>
-              <div className="all">
+            
                 <div className="nabarBtns">
                   
-                    <NavItem>
-                    <div className="ul-navbar">
-                    <a className="ul-navbar">Home</a>
-                    </div>
                    
-                    </NavItem>
-                
-                    <NavItem>
+                    <div  className="ul-navbar" >
+                    <a>Home</a>
+                    </div>
+                            
                      <div className="ul-navbar">
                      <a  onClick={() => { scrollToContent(this.MyStory, { offset: 0, align: 'top', duration: 1000 }) }}>About me</a>
 
                      </div>
-                    </NavItem>
-             
-                 
-                    <NavItem>
-                     
+                       
                      <div className="ul-navbar">
                      <a className="ul-navbar" onClick={() => { scrollToContent2(this.MyStoryProjects, { offset: 0, align: 'top', duration: 1000 }) }}>My Projects</a>
 
-                     </div>
-
-                    </NavItem>
-                 
-              
-                    <NavItem>
+                     </div>          
                     <div className="ul-navbar">
                     <a className="ul-navbar" onClick={() => { scrollToContent3(this.MyStoryEduction, { offset: 0, align: 'top', duration: 1000 }) }}>Eduction</a>
-
-                    </div>
-                    </NavItem>
-              
+                    </div>         
                 </div>
-              </div>
+              
             </Nav>
           </Collapse>
         </Navbar>
