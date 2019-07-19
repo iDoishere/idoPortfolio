@@ -1,0 +1,63 @@
+
+#about {
+display: flex;
+background: #2B2B2B;
+padding-top: 96px;
+padding-bottom: 66px;
+justify-content: space-evenly;
+ flex-wrap: wrap;
+}
+h2{
+color: aliceblue;
+}
+ .profilepic {
+width:  25vh;
+border-radius: 100%;
+}
+#about p {
+line-height: 30px;
+color: #7A7A7A;
+}
+.titleAbout{
+width: 10em;
+}
+ .contact-details{
+     font-size: 4vh;
+ }
+ .resumeDiv{
+    margin-top: 8vh;
+ }
+ .Resume{
+     padding: 3vh 7vh;   
+ } 
+ .Resume:hover{
+    padding: 3vh 7vh;
+    text-decoration: none;   
+}
+ a {
+	transition: all 3000ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    justify-content: center;
+	padding: 1vh 4vh;	 
+}
+a.Resume {
+	color: rgb(255, 255, 255);
+	box-shadow: rgba(255, 255, 255, 0.979) 0 0px 0px 2px inset;   
+}
+
+a.Resume:hover {
+	color: rgba(255, 255, 255, 0.85);
+	box-shadow: rgba(30, 22, 54, 0.7) 0 0px 0px 40px inset;
+}
+@media screen and (max-width: 800px) {
+ .profilepic{  
+        width: 15vh;    
+    }
+    .titleAbout , .contact-details {
+        display: flex;
+        flex-direction: column;
+        
+    } 
+    h2.contactTitle{
+        font-size: 5vh;;
+    }
+}

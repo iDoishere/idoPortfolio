@@ -1,0 +1,20 @@
+    .fotterText{
+    font-weight: bold;
+
+    }
+
+    .divFooter{
+    font-size: 4vh;
+    }
+
+    .footerText::first-letter {        
+    color: #76bb7f;
+    font-size: 5vh;
+    }  
+
+    p .span{  
+    color: #61b8ff;
+    font-size: 5vh;
+    } 
+
+     

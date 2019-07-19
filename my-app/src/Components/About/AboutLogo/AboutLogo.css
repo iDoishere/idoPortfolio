@@ -1,0 +1,40 @@
+  .titleLogo{
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+  }
+  .mainlogo{ 
+    background: #2B2B2B;
+  }
+  .imglogo4{
+    margin-left: 3.5%;
+  }
+  .imglogoAni {
+    margin-left: 2%;
+    animation: App-logo-spin infinite 4s linear;
+    height: 40vmin;
+    pointer-events: none;
+  }
+   .sortDiv{
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    color: aliceblue;
+  }
+   .sort{
+   cursor: pointer; 
+  }
+  @keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width:800px){
+  .Expertise{
+    margin-top: 3%;
+  }
+}

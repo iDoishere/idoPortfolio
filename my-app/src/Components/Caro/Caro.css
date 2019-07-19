@@ -1,0 +1,16 @@
+.listProjects{
+    margin-top:  2%;
+}
+.list{
+    display: flex; 
+    justify-content: space-around;
+  
+}
+
+@media screen and (max-width: 800px) {
+ 
+    .list{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

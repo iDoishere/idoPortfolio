@@ -1,0 +1,16 @@
+ .schoolName{
+   color: #76bb7f;
+   display: flex;
+   justify-content: center;
+   font-size: 5vh;
+ }
+ .achievements{
+     display: flex;
+     margin-top: 2%;
+     font-family: 'Times New Roman', Times, serif;
+     font-weight: bold;
+     font-size: 3vh;
+ }
+ .schoolName1{
+    color: #61b8ff;
+ }
