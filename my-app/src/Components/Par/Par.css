@@ -195,14 +195,14 @@
         display: flex;
         margin-left: 3vh;
       }
-      .nabarBtns{
-              display: flex;
-          font-size: 1.5vh;
-        
-          justify-content: space-between;
-      }
+   
          .ul-navbar{
                  display: flex;
+                 justify-content: space-evenly;
+                 width: 100%;
+         }
+         .nabarBtns{
+                 width: 21%;
          }
   
 }
