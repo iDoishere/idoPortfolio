@@ -1,18 +1,9 @@
-  .titleLogo{
-  display: flex;
-  justify-content: center;
-  color: aliceblue;
-  }
+ 
   .mainlogo{ 
   background: #2B2B2B;
   }
  
-  .imglogoAni {
-  margin-left: 2%;
-  animation: App-logo-spin infinite 4s linear;
-  
-  pointer-events: none;
-  }
+ 
   .sortDiv{
   display: flex;
   justify-content: center;
@@ -25,32 +16,4 @@
     cursor: pointer; 
   }
 
-
-  .main-logo{
-  display: flex;
-  margin-top:4%; 
-  }
-  .rightSide{
-  display: flex;
-  justify-content: space-around;
-  }
-  .leftSide{
-  display: flex;
-  justify-content: space-around;
-  }
-
-
-  @keyframes App-logo-spin {
-  from {
-  transform: rotate(0deg);
-  }
-  to {
-  transform: rotate(360deg);
-  }
-  }
-
-  @media screen and (max-width:800px){
-  .Expertise{
-  margin-top: 3%;
-  }
-  }
+ 

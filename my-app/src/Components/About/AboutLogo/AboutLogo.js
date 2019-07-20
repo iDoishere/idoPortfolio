@@ -1,10 +1,4 @@
 import React from 'react'
-import logo from '../../../images/logo.svg'
-import logoNode from '../../../images/logoNode.svg'
-import logoJs from '../../../images/logoJs.svg'
-import html from '../../../images/html5.svg'
-import css from '../../../images/css3.svg'
-
 import './AboutLogo.css'
 
 function AboutLogo({ sortProjects }) {
