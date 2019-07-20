@@ -9,13 +9,15 @@ function Caro({ resumePortfolio, moreImages }) {
     <div className="list" >
       {
         resumePortfolio.map((project, index) => {
+          console.log(project)
           return (
             <div className="listProjects" key={index}>
               <CaroProject
                 name={project.name}
                 description={project.description}
                 img={project.imgurl}
-                index={index}
+                // index={index}
+                index={project.index}
                 gitLink={project.gitLinkGit}
                 live={project.live}
                 moreImages={() => { moreImages(index) }}

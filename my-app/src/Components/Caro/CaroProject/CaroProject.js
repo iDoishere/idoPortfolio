@@ -10,22 +10,22 @@ import chatpic from '../../../images/chatpic.png'
 
 function CaroProject({ name, img, index, description, moreImages, gitLink, live }) {
   let finalImage = '';
-
-  if (index === 0) {
+console.log(index)
+  if (index === '0' ) {
     finalImage = google1;
 
   }
-  if (index === 1) {
+  if (index === '1') {
     finalImage = shopping;
 
   }
-  if (index === 2) {
+  if (index === '2') {
     finalImage = secimageupload;
   }
-  if (index === 3) {
+  if (index === '3') {
     finalImage = youtubelogo;
   }
-  if (index === 4) {
+  if (index === '4') {
     finalImage = chatpic;
   }
 
