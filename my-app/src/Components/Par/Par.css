@@ -224,7 +224,10 @@ background: url("https://image.shutterstock.com/z/stock-vector-back-end-and-fron
          }
  
  
-   .about{}
+   .about{
+        background: url("https://image.shutterstock.com/z/stock-vector-back-end-and-front-end-software-development-program-coding-and-testing-programming-languages-653306632.jpg")no-repeat fixed center / cover     !important; 
+ 
+   }
 }
 
  
