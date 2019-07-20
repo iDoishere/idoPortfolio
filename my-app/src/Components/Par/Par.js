@@ -160,7 +160,7 @@ class Par extends Component {
 
  <div>
  
-        <Parallax className="bgimg1" bgImage={image1}  style={{ height: 500  }} strength={500}>
+        <Parallax className="bgimg1"  style={{ height: 500  }} strength={500}>
           <div className="mainInfo">
             <h1 className="title">I'm Ido Cohen</h1>
             <h5 className="title2">Full Stack Developer</h5>
@@ -187,8 +187,8 @@ class Par extends Component {
         
         
   
-        <div className="bgimg1">
-        <Parallax   bgImage={image1}   style={{ height: 800  }} strength={1100}>
+        <section  >
+        <Parallax    style={{ height: 800  }} strength={500}>
  
         <div class="about">
   <div class="container">
@@ -206,7 +206,7 @@ class Par extends Component {
           />
           
         </Parallax >
-        </div>
+        </section>
 
 
 
