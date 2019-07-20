@@ -1,66 +1,56 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:900');
 
-  /*   navbar */
+  /*   navbar links*/
     .nabarBtns{
     display: flex;
     cursor: pointer;
     font-weight: bold;
     }
   
- /*   parrlax section */
+ /*   parrlax section first image*/
     .mainInfo{
     display: flex;              
     color: aliceblue;
     flex-direction: column;
     align-items: center;
- 
-
     }
 
     .ul-navbar{
-        transition: all .33s ease-in-out;
-      
+        transition: all .33s ease-in-out;  
     }
-    .ul-navbar:hover{
-            
-            transform: scale(1.29);
+    .ul-navbar:hover{         
+     transform: scale(1.29);
     }
    .title2{
     font-size: 4vh;
    }
-      h3.title  {
+      p.title , p.title2 {
       box-sizing: content-box;
       cursor: pointer;
       border: none;
-      font: normal normal bold 80px/normal "Creepster", Helvetica, sans-serif;
-      color: rgba(255,255,255,1);
+      font: normal normal bold 40px/normal "Creepster", Helvetica, sans-serif;
+    
+      color: floralwhite;
       text-align: center;         
       text-overflow: clip;  
       text-shadow: 4px 4px 0 #2B2B2B  ;
       transition: text-shadow 1500ms cubic-bezier(0.42, 0, 0.58, 1);
       }       
-      .title:hover {
-      text-shadow: 1px 1px 8px rgba(255, 255, 255, 0.5) ;  
-      transition: text-shadow 250ms cubic-bezier(0.42, 0, 0.58, 1);
-      }
       .titlep{
       font-size: 3vh;
+      font-weight: bold;
       }
       .social-network {
-      display: flex;
-      
+      display: flex;  
       justify-content: center;
       justify-content: space-evenly;    
       }
       .social-network i{        
-      font-size:12vh;
+      font-size:10vh;
       }
-     
-      .projectTitle{
-           
-         
-        text-shadow: 7px 7px #f1f1f1;
-        font-size: 11vh;
+      h3.projectTitle{    
+         color: black;
+        font-size: 8vh;
          margin-left: 20%;
         margin-top: 5vh; 
         
@@ -192,14 +182,15 @@
 
 
       @media screen and (max-width: 800px) {
-      h2.title2{
-              display: flex;
-              background-color: #2738cf;
-      }
-  
+ 
+  .title{
+          font-size: 6vh;
+     
+     }
       .titlep{
-        display: flex;
-        margin-left: 3vh;
+        width: 12em;
+         color: black;
+         font-weight: bold;;
       }
    
          .ul-navbar{
@@ -214,5 +205,12 @@
  
  
 }
+/* for iphone X */
+@media screen and (max-width: 375px) {
 
- 
+        #about{
+            flex-wrap: wrap;
+            height: 390px;
+        }
+       
+        }

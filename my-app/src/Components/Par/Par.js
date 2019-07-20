@@ -11,6 +11,8 @@ import Plx from 'react-plx';
 import Modal from '../Modal/Modal'
 import Footer from '../Footer/Footer'
 import ResumeData from '../../Container/ResumeData'
+import { Wave } from 'react-animated-text';
+ 
 class Par extends Component {
   constructor(props) {
     super(props);
@@ -135,27 +137,29 @@ class Par extends Component {
                   <a onClick={() => { scrollToContent(this.MyStory, { offset: 0, align: 'top', duration: 1000 }) }}>About me</a>
                 </div>
                 <div className="ul-navbar">
-                  <a className="ul-navbar" onClick={() => { scrollToContent2(this.MyStoryProjects, { offset: 0, align: 'top', duration: 1000 }) }}>My Projects</a>
+                  <a   onClick={() => { scrollToContent2(this.MyStoryProjects, { offset: 0, align: 'top', duration: 1000 }) }}>My Projects</a>
                 </div>
                 <div className="ul-navbar">
-                  <a className="ul-navbar" onClick={() => { scrollToContent3(this.MyStoryEduction, { offset: 0, align: 'top', duration: 1000 }) }}>Eduction</a>
+                  <a   onClick={() => { scrollToContent3(this.MyStoryEduction, { offset: 0, align: 'top', duration: 1000 }) }}>Eduction</a>
                 </div>
               </div>
             </Nav>
           </Collapse>
         </Navbar>
         <div>
-          <Parallax className="bgimg1" bgImage={image1} style={{ height: 500 }} strength={500}>
+          <Parallax className="bgimg1" bgImage={image1} style={{ height: 400 }} strength={500}>
             <div className="mainInfo">
-              <h3 className="title">I'm Ido Cohen</h3>
-              <h5 className="title2">Full Stack Developer</h5>
-              <p className="titlep">HTML/CSS | Bootstrap | JavaScript | React |NodeJS | Express | MongoDB</p>
+              <p className="title">I'm Ido Cohen</p>
+              <p className="title2">Full Stack Developer</p>
+            <div className="titlep">
+            <Wave   text="HTML/CSS | Bootstrap | JavaScript | React |NodeJS | Express | MongoDB" />
+            </div>  
             </div>
             <Plx
               className='MyAwesomeParallax'
               parallaxData={parallaxData}>
               <div className='social-network'>
-                <div className="try1">
+                <div  >
                   <a href="https://www.linkedin.com/in/ido-cohen-32617816b/" rel="noopener noreferrer" target="_blank">
                     <i class="fa fa-linkedin"  ></i>
                   </a>
@@ -169,7 +173,7 @@ class Par extends Component {
             </Plx>
           </Parallax >
           <section >
-            <Parallax bgImage={image1} style={{ height: 800 }} strength={500}>
+            <Parallax bgImage={image1} style={{ height: 600 }} strength={500}>
               <div class="about">
                 <div ref={(MyStory) => { this.MyStory = MyStory; }} >
                   <About resumeData={resumeData}

@@ -41,13 +41,13 @@ function About({ resumeData, sortProjects }) {
             <p> {resumeData.address}</p>
             <p> {resumeData.email}  </p>
           </div>
-              <div className="Resume1">
+  
+        </div>
+    
+        <div className="Resume1">
         <a className="Resume" href={resume}>Resume</a>
          
         </div>
-        </div>
-    
-      
       </div>
       {/* <AboutLogo sortProjects={sortProjects}/>      */}
       <div>

@@ -4,6 +4,7 @@ display: flex;
 background: #2B2B2B;
 padding-top: 5%;
 justify-content: space-evenly;
+height:330px;
  /*  */
 }
 h3{
@@ -52,6 +53,7 @@ a.Resume:hover {
 
 #about{
     flex-wrap: wrap;
+    height: 365px;
 }
     .profilepic{  
         width: 10vh;    
@@ -75,3 +77,15 @@ a.Resume:hover {
            
         } 
 }
+
+
+
+
+@media screen and (max-width: 375px) {
+
+    #about{
+        flex-wrap: wrap;
+        height: 390px;
+    }
+   
+    }
