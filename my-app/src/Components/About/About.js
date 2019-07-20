@@ -49,7 +49,7 @@ function About({ resumeData,sortProjects }) {
           </div>
         </div>
       </div>
-   <AboutLogo sortProjects={sortProjects}/>     
+   {/* <AboutLogo sortProjects={sortProjects}/>      */}
       <div>
       </div>
     </div>
