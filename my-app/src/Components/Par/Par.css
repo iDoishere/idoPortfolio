@@ -78,15 +78,15 @@
                   animation: social-network 1.5s both;
         }
 
-        header, .about{
-                padding: 300px 0;
+       .about{
+             
               }
-header  {
+.bgimg1  {
  
 background: url("https://cdn.pixabay.com/photo/2015/04/20/13/17/work-731198_960_720.jpg") no-repeat fixed center / cover;
  
 }
-.about{
+.bgimg2{
  
 background: url("https://image.shutterstock.com/z/stock-vector-back-end-and-front-end-software-development-program-coding-and-testing-programming-languages-653306632.jpg")no-repeat fixed center / cover       ;
  
@@ -224,10 +224,7 @@ background: url("https://image.shutterstock.com/z/stock-vector-back-end-and-fron
          }
  
  
-   .about{
-        background: url("https://image.shutterstock.com/z/stock-vector-back-end-and-front-end-software-development-program-coding-and-testing-programming-languages-653306632.jpg")no-repeat fixed center / cover     !important; 
  
-   }
 }
 
  

@@ -154,29 +154,90 @@ class Par extends Component {
         </Navbar>
 
  
-        <header>
-  <div class="container">
-    <div class="row">    
-      <div class="twelve columns">
-        <h1>EKM Parallax</h1> 
-      </div>
-    </div>   
-  </div> 
-</header>
 
+
+
+ <div>
  
-<div class="about">
+        <Parallax className="bgimg1"   style={{ height: 500  }} strength={500}>
+          <div className="mainInfo">
+            <h1 className="title">I'm Ido Cohen</h1>
+            <h5 className="title2">Full Stack Developer</h5>
+            <p className="titlep">HTML/CSS | Bootstrap | JavaScript | React |NodeJS | Express | MongoDB</p>
+          </div>
+          <Plx
+            className='MyAwesomeParallax'
+            parallaxData={parallaxData}
+          >
+            <div className='social-network'>
+              <div className="try1">
+                <a href="https://www.linkedin.com/in/ido-cohen-32617816b/" rel="noopener noreferrer" target="_blank">
+                  <i class="fa fa-linkedin"  ></i>
+                </a>
+              </div>
+              <div>
+                <a href="https://github.com/iDoishere?tab=repositories" rel="noopener noreferrer" target="_blank">
+                  <i class="fa fa-git-square"  ></i>
+                </a>
+              </div>
+            </div>
+          </Plx>
+        </Parallax >
+        
+        
+  
+        
+        <Parallax className="bgimg2"   style={{ height: 750  }} strength={500}>
+ 
+        <div class="about">
   <div class="container">
     <div class="row">
       <div class="twelve columns">
-        <h1>EKM Parallax</h1>
+      <div ref={(MyStory) => { this.MyStory = MyStory; }} >
+     
+        </div>
       </div>
     </div> 
   </div> 
-</div>
+</div> 
+      <About resumeData={resumeData}
+            sortProjects={this.sortProjects}
+          />
+          
+        </Parallax >
 
 
+        
+        
+        
+  
+        <div ref={(MyStoryProjects) => { this.MyStoryProjects = MyStoryProjects; }}>
+          <Caro MyStoryProjects={this.MyStoryProjects}
+            resumePortfolio={this.state.portfolioData}
+            moreImages={this.moreImages}
+          />
+          {
+            this.state.ifModal ? <Modal
+              index={this.state.index}
+              close={this.handleClose}
+              show={this.state.ifModal}
+              finalImage={this.state.finalImage}
+            /> : ''
+          }
+        </div>
+        <div ref={(MyStoryEduction) => { this.MyStoryEduction = MyStoryEduction; }} >
+          <Plx
+            className='MyAwesomeParallax'
+            parallaxData={phoneData}
+          >
+            <h3 className="projectTitle">Eductio<span>n</span></h3>
+          </Plx>
+          <TimeLine education={resumeData.education} />
+        </div>
+        <Footer />
+      </div>
 
+ 
         <div ref={(MyStoryProjects) => { this.MyStoryProjects = MyStoryProjects; }}>
 
           <Caro MyStoryProjects={this.MyStoryProjects}
