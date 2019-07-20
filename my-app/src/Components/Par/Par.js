@@ -153,7 +153,7 @@ class Par extends Component {
           </Collapse>
         </Navbar>
 
-    
+        <header>
           <div class="container">
             <div class="row">
               <div class="twelve columns">
@@ -182,7 +182,7 @@ class Par extends Component {
               </div>
             </div>
           </div>
-   
+        </header>
         <section class="about">
 
           <div ref={(MyStory) => { this.MyStory = MyStory; }} >

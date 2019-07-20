@@ -6,13 +6,11 @@
   .mainlogo{ 
   background: #2B2B2B;
   }
-  .imglogo4{
-  margin-left: 3.5%;
-  }
+ 
   .imglogoAni {
   margin-left: 2%;
   animation: App-logo-spin infinite 4s linear;
-  height: 40vmin;
+  
   pointer-events: none;
   }
   .sortDiv{
@@ -24,7 +22,7 @@
   a.sort {
   cursor: pointer; 
   color: #ffffff;
-  margin-top:4%; 
+  
   }
 
 
