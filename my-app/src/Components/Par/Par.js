@@ -165,7 +165,7 @@ class Par extends Component {
 </header>
 
  
-<section class="about">
+<div class="about">
   <div class="container">
     <div class="row">
       <div class="twelve columns">
@@ -173,7 +173,7 @@ class Par extends Component {
       </div>
     </div> 
   </div> 
-</section>
+</div>
 
 
 
