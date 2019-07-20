@@ -1,41 +1,58 @@
   .titleLogo{
-    display: flex;
-    justify-content: center;
-    color: aliceblue;
+  display: flex;
+  justify-content: center;
+  color: aliceblue;
   }
   .mainlogo{ 
-    background: #2B2B2B;
+  background: #2B2B2B;
   }
   .imglogo4{
-    margin-left: 3.5%;
+  margin-left: 3.5%;
   }
   .imglogoAni {
-    margin-left: 2%;
-    animation: App-logo-spin infinite 4s linear;
-    height: 40vmin;
-    pointer-events: none;
+  margin-left: 2%;
+  animation: App-logo-spin infinite 4s linear;
+  height: 40vmin;
+  pointer-events: none;
   }
-   .sortDiv{
-    display: flex;
-    justify-content: center;
-    justify-content: space-evenly;
-   
+  .sortDiv{
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+
   }
-   a.sort {
-   cursor: pointer; 
-   color: #ffffff;
+  a.sort {
+  cursor: pointer; 
+  color: #ffffff;
+  margin-top:4%; 
   }
+
+
+  .main-logo{
+  display: flex;
+  margin-top:4%; 
+  }
+  .rightSide{
+  display: flex;
+  justify-content: space-around;
+  }
+  .leftSide{
+  display: flex;
+  justify-content: space-around;
+  }
+
+
   @keyframes App-logo-spin {
   from {
-    transform: rotate(0deg);
+  transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+  transform: rotate(360deg);
   }
-}
+  }
 
-@media screen and (max-width:800px){
+  @media screen and (max-width:800px){
   .Expertise{
-    margin-top: 3%;
+  margin-top: 3%;
   }
-}
+  }

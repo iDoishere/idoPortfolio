@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Parallax} from 'react-parallax';
+import { Parallax } from 'react-parallax';
 
 import { Collapse, Navbar, NavbarToggler, Nav, NavItem, NavLink } from 'reactstrap';
 import './Par.css'
@@ -79,7 +79,7 @@ class Par extends Component {
   render() {
 
     const image1 =
-      "https://cdn.pixabay.com/photo/2015/04/20/13/17/work-731198_960_720.jpg";
+      "";
 
     const {
       resumeData
@@ -124,71 +124,83 @@ class Par extends Component {
 
       <div>
         <Navbar className="Navbar" color="light" light expand="md">
+
+
           <NavbarToggler onClick={this.toggleNavbar} />
-    
+
           <Collapse isOpen={this.state.collapsed} navbar>
             <Nav className="ml-auto" navbar>
-            
-                <div className="nabarBtns">
-                  
-                   
-                    <div  className="ul-navbar" >
-                    <a>Home</a>
-                    </div>
-                            
-                     <div className="ul-navbar">
-                     <a  onClick={() => { scrollToContent(this.MyStory, { offset: 0, align: 'top', duration: 1000 }) }}>About me</a>
-
-                     </div>
-                       
-                     <div className="ul-navbar">
-                     <a className="ul-navbar" onClick={() => { scrollToContent2(this.MyStoryProjects, { offset: 0, align: 'top', duration: 1000 }) }}>My Projects</a>
-
-                     </div>          
-                    <div className="ul-navbar">
-                    <a className="ul-navbar" onClick={() => { scrollToContent3(this.MyStoryEduction, { offset: 0, align: 'top', duration: 1000 }) }}>Eduction</a>
-                    </div>         
+              <div className="nabarBtns">
+                <div className="ul-navbar" >
+                  <a>Home</a>
                 </div>
-              
+
+                <div className="ul-navbar">
+                  <a onClick={() => { scrollToContent(this.MyStory, { offset: 0, align: 'top', duration: 1000 }) }}>About me</a>
+
+                </div>
+
+                <div className="ul-navbar">
+                  <a className="ul-navbar" onClick={() => { scrollToContent2(this.MyStoryProjects, { offset: 0, align: 'top', duration: 1000 }) }}>My Projects</a>
+
+                </div>
+                <div className="ul-navbar">
+                  <a className="ul-navbar" onClick={() => { scrollToContent3(this.MyStoryEduction, { offset: 0, align: 'top', duration: 1000 }) }}>Eduction</a>
+                </div>
+              </div>
+
             </Nav>
           </Collapse>
         </Navbar>
-        <Parallax className="bgimg1" bgImage={image1} style={{ height: 500, opacity: 0.6 }} strength={500}>
-          <div className="mainInfo">
-            <h1 className="title">I'm Ido Cohen</h1>
-            <h5 className="title2">Full Stack Developer</h5>
-            <p className="titlep">HTML/CSS | Bootstrap | JavaScript | React |NodeJS | Express | MongoDB</p>
-          </div>
-          <Plx
-            className='MyAwesomeParallax'
-            parallaxData={parallaxData}
-          >
-            <div className='social-network'>
-              <div className="try1">
-                <a href="https://www.linkedin.com/in/ido-cohen-32617816b/" rel="noopener noreferrer" target="_blank">
-                  <i className="fa fa-linkedin"  ></i>
-                </a>
-              </div>
-              <div>
-                <a href="https://github.com/iDoishere?tab=repositories" rel="noopener noreferrer" target="_blank">
-                  <i className="fa fa-git-square"  ></i>
-                </a>
+
+        <header>
+          <div class="container">
+            <div class="row">
+              <div class="twelve columns">
+                <div className="mainInfo">
+                  <h1 className="title">I'm Ido Cohen</h1>
+
+                  <p className="titlep">HTML/CSS | Bootstrap | JavaScript | React |NodeJS | Express | MongoDB</p>
+                </div>
+                <Plx
+                  className='MyAwesomeParallax'
+                  parallaxData={parallaxData}
+                >
+                  <div className='social-network'>
+                    <div className="try1">
+                      <a href="https://www.linkedin.com/in/ido-cohen-32617816b/" rel="noopener noreferrer" target="_blank">
+                        <i className="fa fa-linkedin"  ></i>
+                      </a>
+                    </div>
+                    <div>
+                      <a href="https://github.com/iDoishere?tab=repositories" rel="noopener noreferrer" target="_blank">
+                        <i className="fa fa-git-square"  ></i>
+                      </a>
+                    </div>
+                  </div>
+                </Plx>
               </div>
             </div>
-          </Plx>
+          </div>
+        </header>
 
-        </Parallax >
-        <div ref={(MyStory) => { this.MyStory = MyStory; }} >
-          <About resumeData={resumeData}
-            sortProjects={this.sortProjects}
-          />
-        </div>
+
+        <section class="about">
+
+          <div ref={(MyStory) => { this.MyStory = MyStory; }} >
+            <About resumeData={resumeData}
+              sortProjects={this.sortProjects}
+            />
+          </div> 
+        </section>
+
+
         <div ref={(MyStoryProjects) => { this.MyStoryProjects = MyStoryProjects; }}>
 
           <Caro MyStoryProjects={this.MyStoryProjects}
             resumePortfolio={this.state.portfolioData}
             moreImages={this.moreImages}
-          />  
+          />
           {
             this.state.ifModal ? <Modal
               index={this.state.index}
