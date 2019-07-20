@@ -80,7 +80,7 @@ class Par extends Component {
 
     const image1 =
       "https://unsplash.it/1080/720/?image=376";
- 
+
     const {
       resumeData
     } = this.props;
@@ -124,51 +124,36 @@ class Par extends Component {
 
       <div>
         <Navbar className="Navbar" color="light" light expand="md">
-
-
-          <NavbarToggler onClick={this.toggleNavbar} />
-
+        <NavbarToggler onClick={this.toggleNavbar} />
           <Collapse isOpen={this.state.collapsed} navbar>
             <Nav className="ml-auto" navbar>
               <div className="nabarBtns">
                 <div className="ul-navbar" >
                   <a>Home</a>
                 </div>
-
                 <div className="ul-navbar">
                   <a onClick={() => { scrollToContent(this.MyStory, { offset: 0, align: 'top', duration: 1000 }) }}>About me</a>
-
                 </div>
-
                 <div className="ul-navbar">
                   <a className="ul-navbar" onClick={() => { scrollToContent2(this.MyStoryProjects, { offset: 0, align: 'top', duration: 1000 }) }}>My Projects</a>
-
                 </div>
                 <div className="ul-navbar">
                   <a className="ul-navbar" onClick={() => { scrollToContent3(this.MyStoryEduction, { offset: 0, align: 'top', duration: 1000 }) }}>Eduction</a>
                 </div>
               </div>
-
             </Nav>
           </Collapse>
         </Navbar>
-
-
-
-
-
         <div>
-
           <Parallax className="bgimg1" bgImage={image1} style={{ height: 500 }} strength={500}>
             <div className="mainInfo">
-              <h1 className="title">I'm Ido Cohen</h1>
+              <h3 className="title">I'm Ido Cohen</h3>
               <h5 className="title2">Full Stack Developer</h5>
               <p className="titlep">HTML/CSS | Bootstrap | JavaScript | React |NodeJS | Express | MongoDB</p>
             </div>
             <Plx
               className='MyAwesomeParallax'
-              parallaxData={parallaxData}
-            >
+              parallaxData={parallaxData}>
               <div className='social-network'>
                 <div className="try1">
                   <a href="https://www.linkedin.com/in/ido-cohen-32617816b/" rel="noopener noreferrer" target="_blank">
@@ -183,33 +168,17 @@ class Par extends Component {
               </div>
             </Plx>
           </Parallax >
-
-
-
           <section >
             <Parallax bgImage={image1} style={{ height: 800 }} strength={500}>
-
               <div class="about">
-               
-                      <div ref={(MyStory) => { this.MyStory = MyStory; }} >
-                      <About resumeData={resumeData}
-                sortProjects={this.sortProjects}
-              />
-                      </div>
-                 
-            
+                <div ref={(MyStory) => { this.MyStory = MyStory; }} >
+                  <About resumeData={resumeData}
+                    sortProjects={this.sortProjects}
+                  />
+                </div>
               </div>
-           
-
             </Parallax >
           </section>
-
-
-
-
-
-
-
           <div ref={(MyStoryProjects) => { this.MyStoryProjects = MyStoryProjects; }}>
             <Caro MyStoryProjects={this.MyStoryProjects}
               resumePortfolio={this.state.portfolioData}
@@ -235,8 +204,6 @@ class Par extends Component {
           </div>
           <Footer />
         </div>
-
- 
       </div>
     )
   }
