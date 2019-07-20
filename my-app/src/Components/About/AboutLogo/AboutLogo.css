@@ -17,12 +17,12 @@
   display: flex;
   justify-content: center;
   justify-content: space-evenly;
+  color: #ffffff;
 
+ 
   }
   a.sort {
-  cursor: pointer; 
-  color: #ffffff;
-  
+    cursor: pointer; 
   }
 
 

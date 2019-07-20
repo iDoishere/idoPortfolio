@@ -12,7 +12,7 @@ import Modal from '../Modal/Modal'
 import Footer from '../Footer/Footer'
 import ResumeData from '../../Container/ResumeData'
 import { Wave } from 'react-animated-text';
- 
+ import AboutLogo from '../About/AboutLogo/AboutLogo'
 class Par extends Component {
   constructor(props) {
     super(props);
@@ -147,7 +147,7 @@ class Par extends Component {
           </Collapse>
         </Navbar>
         <div>
-          <Parallax className="bgimg1" bgImage={image1} style={{ height: 400 }} strength={500}>
+          <Parallax className="bgimg1" bgImage={image1} style={{ height: 350 }} strength={500}>
             <div className="mainInfo">
               <p className="title">I'm Ido Cohen</p>
               <p className="title2">Full Stack Developer</p>
@@ -172,18 +172,19 @@ class Par extends Component {
               </div>
             </Plx>
           </Parallax >
-          <section >
-            <Parallax bgImage={image1} style={{ height: 600 }} strength={500}>
+         
+            <Parallax bgImage={image1} style={{ height:680 }} strength={500}>
               <div class="about">
                 <div ref={(MyStory) => { this.MyStory = MyStory; }} >
                   <About resumeData={resumeData}
-                    sortProjects={this.sortProjects}
+                 
                   />
                 </div>
               </div>
             </Parallax >
-          </section>
+          
           <div ref={(MyStoryProjects) => { this.MyStoryProjects = MyStoryProjects; }}>
+           <AboutLogo    sortProjects={this.sortProjects} />   
             <Caro MyStoryProjects={this.MyStoryProjects}
               resumePortfolio={this.state.portfolioData}
               moreImages={this.moreImages}
