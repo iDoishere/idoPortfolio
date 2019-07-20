@@ -2,8 +2,7 @@
 #about {
 display: flex;
 background: #2B2B2B;
-padding-top: 96px;
-padding-bottom: 66px;
+padding: 5% 5%;
 justify-content: space-evenly;
  flex-wrap: wrap;
 }
@@ -25,7 +24,7 @@ width: 10em;
      font-size: 4vh;
  }
  .resumeDiv{
-    margin-top: 8vh;
+    padding: 5% 5%
  }
  .Resume{
      padding: 3vh 7vh;   
@@ -52,12 +51,13 @@ a.Resume:hover {
  .profilepic{  
         width: 15vh;    
     }
-    .titleAbout , .contact-details {
+   .contact-details{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+   }
+    .my-data{
         display: flex;
         flex-direction: column;
-        
-    } 
-    h2.contactTitle{
-        font-size: 5vh;;
     }
 }

@@ -88,8 +88,12 @@ background: url("https://cdn.pixabay.com/photo/2015/04/20/13/17/work-731198_960_
 }
 .about{
  
-background: url("https://image.shutterstock.com/z/stock-vector-back-end-and-front-end-software-development-program-coding-and-testing-programming-languages-653306632.jpg") no-repeat fixed center / cover   ;
+background: url("https://image.shutterstock.com/z/stock-vector-back-end-and-front-end-software-development-program-coding-and-testing-programming-languages-653306632.jpg")       ;
  
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed; /* <= This one */
 }
        
   
@@ -223,14 +227,7 @@ background: url("https://image.shutterstock.com/z/stock-vector-back-end-and-fron
          }
  
  
-      header{
-      
-        background-image: url("https://cdn.pixabay.com/photo/2015/04/20/13/17/work-731198_960_720.jpg") no-repeat fixed center / cover;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed; /* <= This one */
-      }
+   .about{}
 }
 
  
