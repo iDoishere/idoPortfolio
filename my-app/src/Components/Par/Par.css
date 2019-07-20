@@ -79,20 +79,9 @@
         }
 
   
-.bgimg1  {
-        background: url("https://unsplash.it/1080/720/?image=376") no-repeat fixed  center;
-        background-size: cover;
-        text-align: center;
-
-}
-section{
- 
-        background: url("https://unsplash.it/1080/720/?image=376") no-repeat fixed center / cover;
-        text-align: center;
- 
-}
-       
-  
+  section{
+        background-repeat: no-repeat;   
+  }
    
               
               
