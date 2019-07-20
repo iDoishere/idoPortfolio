@@ -31,22 +31,23 @@ function About({ resumeData, sortProjects }) {
           </Plx>
         </div>
         <div className="titleAbout">
-          <h2>About Me</h2>
+          <h3>About Me</h3>
           <p>{resumeData.roleDescription}</p>
         </div>
         <div className="contact-details">
-          <h2 className="contactTitle">Contact Details</h2>
+          <h3 className="contactTitle">Contact Details</h3>
           <div className="my-data">
-
             <p> {resumeData.name} </p>
             <p> {resumeData.address}</p>
             <p> {resumeData.email}  </p>
-
           </div>
-          <div className="resumeDiv">
-            <a className="Resume" href={resume}>Resume</a>
-          </div>
+              <div className="Resume1">
+        <a className="Resume" href={resume}>Resume</a>
+         
         </div>
+        </div>
+    
+      
       </div>
       {/* <AboutLogo sortProjects={sortProjects}/>      */}
       <div>

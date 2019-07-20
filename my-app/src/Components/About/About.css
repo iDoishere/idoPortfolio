@@ -2,36 +2,35 @@
 #about {
 display: flex;
 background: #2B2B2B;
-padding: 5% 5%;
+padding-top: 5%;
 justify-content: space-evenly;
- 
- 
+ /*  */
 }
-h2{
+h3{
 color: aliceblue;
 }
  .profilepic {
 width:  25vh;
-border-radius: 100%;
+ 
 }
 #about p {
-line-height: 30px;
+line-height:130%;
 color: #7A7A7A;
 }
 .titleAbout{
-width: 10em;
+width: 12em;
 }
  .contact-details{
-     font-size: 4vh;
+     font-size: 2.5vh;
  }
- .resumeDiv{
-    padding: 5% 5%
- }
- .Resume{
-     padding: 3vh 7vh;   
+ 
+ .Resume1{
+ margin-top: 15%;
+     text-align: center;
+    
  } 
  .Resume:hover{
-    padding: 3vh 7vh;
+   
     text-decoration: none;   
 }
  a {
@@ -40,6 +39,7 @@ width: 10em;
 	padding: 1vh 4vh;	 
 }
 a.Resume {
+    padding:3vh 7vh;   
 	color: rgb(255, 255, 255);
 	box-shadow: rgba(255, 255, 255, 0.979) 0 0px 0px 2px inset;   
 }
@@ -49,16 +49,29 @@ a.Resume:hover {
 	box-shadow: rgba(30, 22, 54, 0.7) 0 0px 0px 40px inset;
 }
 @media screen and (max-width: 800px) {
- .profilepic{  
-        width: 15vh;    
+
+#about{
+    flex-wrap: wrap;
+}
+    .profilepic{  
+        width: 10vh;    
     }
-   .contact-details{
-       display: flex;
-       flex-direction: column;
-       align-items: center;
-   }
-    .my-data{
-        display: flex;
-        flex-direction: column;
+    .titleAbout{
+        width:100em;
+        text-align: center
+        ;
+        }
+    h3.contactTitle{
+        text-align: center;
+        font-size:3vh;;
     }
+    a.Resume {
+        padding:1vh 3vh;   
+      
+    }
+    .Resume1{
+        margin-bottom: 8%;
+            text-align: center;
+           
+        } 
 }
