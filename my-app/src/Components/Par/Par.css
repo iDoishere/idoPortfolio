@@ -76,19 +76,17 @@
           -webkit-animation:social-network 1.5s both;
                   animation: social-network 1.5s both;
         }
-        header,   .contact {
-                padding:100px 0;
-              }
-            .about{
-                padding:200px 0;
-                background: url("https://image.shutterstock.com/z/stock-vector-back-end-and-front-end-software-development-program-coding-and-testing-programming-languages-653306632.jpg") no-repeat fixed center / cover;
-                color: white;
-           }
-            header {
-                background: url("https://cdn.pixabay.com/photo/2015/04/20/13/17/work-731198_960_720.jpg")  fixed center / cover;
-                text-align: center;
-              }
- 
+header  {
+padding:100px 0;
+background: url("https://cdn.pixabay.com/photo/2015/04/20/13/17/work-731198_960_720.jpg")  fixed center / cover;
+
+}
+.about{
+padding:200px 0;
+background: url("https://image.shutterstock.com/z/stock-vector-back-end-and-front-end-software-development-program-coding-and-testing-programming-languages-653306632.jpg") no-repeat fixed center / cover;
+color: white;
+}
+       
   
               
               
@@ -220,7 +218,18 @@
          .nabarBtns{
                  width: 21%;
          }
- 
+         .container,   .contact {
+               
+              }
+            .about{
+            
+                background: url("https://image.shutterstock.com/z/stock-vector-back-end-and-front-end-software-development-program-coding-and-testing-programming-languages-653306632.jpg") no-repeat fixed center / cover;
+                color: white;
+           }
+              .container {
+                background: url("https://cdn.pixabay.com/photo/2015/04/20/13/17/work-731198_960_720.jpg")  fixed center / cover;
+                text-align: center;
+              }
   
 }
 
