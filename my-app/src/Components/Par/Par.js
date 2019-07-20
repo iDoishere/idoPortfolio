@@ -154,51 +154,27 @@ class Par extends Component {
         </Navbar>
 
  
-
         <header>
   <div class="container">
     <div class="row">    
       <div class="twelve columns">
-      <div className="mainInfo">
-                  <h1 className="title">I'm Ido Cohen</h1>
-
-                  <p className="titlep">HTML/CSS | Bootstrap | JavaScript | React |NodeJS | Express | MongoDB</p>
-                </div>
-                <div>
-                <Plx
-                  className='MyAwesomeParallax'
-                  parallaxData={parallaxData}
-                >
-                  <div className='social-network'>
-                    <div className="try1">
-                      <a href="https://www.linkedin.com/in/ido-cohen-32617816b/" rel="noopener noreferrer" target="_blank">
-                        <i className="fa fa-linkedin"  ></i>
-                      </a>
-                    </div>
-                    <div>
-                      <a href="https://github.com/iDoishere?tab=repositories" rel="noopener noreferrer" target="_blank">
-                        <i className="fa fa-git-square"  ></i>
-                      </a>
-                    </div>
-                  </div>
-                </Plx>
-
-                </div>
-
+        <h1>EKM Parallax</h1> 
       </div>
     </div>   
   </div> 
 </header>
 
+ 
+<section class="about">
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <h1>EKM Parallax</h1>
+      </div>
+    </div> 
+  </div> 
+</section>
 
-        <section class="about">
-
-          <div ref={(MyStory) => { this.MyStory = MyStory; }} >
-            <About resumeData={resumeData}
-              sortProjects={this.sortProjects}
-            />
-          </div> 
-        </section>
 
 
         <div ref={(MyStoryProjects) => { this.MyStoryProjects = MyStoryProjects; }}>

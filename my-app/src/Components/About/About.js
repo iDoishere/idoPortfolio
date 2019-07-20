@@ -38,15 +38,11 @@ function About({ resumeData, sortProjects }) {
           <h2 className="contactTitle">Contact Details</h2>
           <div className="my-data">
 
-            <p>     {resumeData.name} </p>
-            <p>    {resumeData.address}</p>
-            <p>
+            <p> {resumeData.name} </p>
+            <p> {resumeData.address}</p>
+            <p> {resumeData.email}  </p>
 
-
-              {resumeData.email}
-            </p>
           </div>
-
           <div className="resumeDiv">
             <a className="Resume" href={resume}>Resume</a>
           </div>
