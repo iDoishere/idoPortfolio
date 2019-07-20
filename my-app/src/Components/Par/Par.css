@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:900');
 
   /*   navbar */
     .nabarBtns{
@@ -76,19 +77,23 @@
           -webkit-animation:social-network 1.5s both;
                   animation: social-network 1.5s both;
         }
-header  {
-padding:100px 0;
-background: url("https://cdn.pixabay.com/photo/2015/04/20/13/17/work-731198_960_720.jpg")  fixed center / cover;
 
+        header, .about{
+                padding: 300px 0;
+              }
+header  {
+ 
+background: url("https://cdn.pixabay.com/photo/2015/04/20/13/17/work-731198_960_720.jpg") no-repeat fixed center / cover;
+ 
 }
 .about{
-padding:200px 0;
-background: url("https://image.shutterstock.com/z/stock-vector-back-end-and-front-end-software-development-program-coding-and-testing-programming-languages-653306632.jpg") no-repeat fixed center / cover;
-color: white;
+ 
+background: url("https://image.shutterstock.com/z/stock-vector-back-end-and-front-end-software-development-program-coding-and-testing-programming-languages-653306632.jpg") no-repeat fixed center / cover   ;
+ 
 }
        
   
-              
+        .MyAwesomeParallax{}      
               
               
  @-webkit-keyframes social-network  {
@@ -202,9 +207,7 @@ color: white;
               display: flex;
               background-color: #2738cf;
       }
-      .item2{
-      margin-left: 3%;
-      }
+  
       .titlep{
         display: flex;
         margin-left: 3vh;
@@ -219,16 +222,15 @@ color: white;
                  width: 21%;
          }
  
-            .about{
-            
-                background: url("https://image.shutterstock.com/z/stock-vector-back-end-and-front-end-software-development-program-coding-and-testing-programming-languages-653306632.jpg") no-repeat fixed center / cover;
-                color: white;
-           }
-           header {
-                background: url("https://cdn.pixabay.com/photo/2015/04/20/13/17/work-731198_960_720.jpg")  fixed center / cover;
-                text-align: center;
-              }
-  
+ 
+      header{
+      
+        background-image: url("https://cdn.pixabay.com/photo/2015/04/20/13/17/work-731198_960_720.jpg") no-repeat fixed center / cover;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed; /* <= This one */
+      }
 }
 
  

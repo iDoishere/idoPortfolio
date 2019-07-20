@@ -87,14 +87,14 @@ class Par extends Component {
 
     const parallaxData = [
       {
-        start: 0,
+        start:'self',
         end: 500,
         properties: [
           {
             easing: [0.25, 0.1, 0.53, 3],
-            startValue: 1,
-            endValue: 2.5,
-            property: 'scale',
+            startValue: 0,
+            endValue: 360,
+            property: 'rotate',
           },
         ],
       },
@@ -153,15 +153,18 @@ class Par extends Component {
           </Collapse>
         </Navbar>
 
+ 
+
         <header>
-          <div class="container">
-           
-              <div class="twelve columns">
-                <div className="mainInfo">
+  <div class="container">
+    <div class="row">    
+      <div class="twelve columns">
+      <div className="mainInfo">
                   <h1 className="title">I'm Ido Cohen</h1>
 
                   <p className="titlep">HTML/CSS | Bootstrap | JavaScript | React |NodeJS | Express | MongoDB</p>
                 </div>
+                <div>
                 <Plx
                   className='MyAwesomeParallax'
                   parallaxData={parallaxData}
@@ -179,10 +182,15 @@ class Par extends Component {
                     </div>
                   </div>
                 </Plx>
-              </div>
-      
-          </div>
-        </header>
+
+                </div>
+
+      </div>
+    </div>   
+  </div> 
+</header>
+
+
         <section class="about">
 
           <div ref={(MyStory) => { this.MyStory = MyStory; }} >
