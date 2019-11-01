@@ -2,9 +2,9 @@
 #about {
 display: flex;
 background: #2B2B2B;
-padding-top: 5%;
+padding-top: 6%;
 justify-content: space-evenly;
-height:370px;
+height:380px;
  /*  */
 }
 h3{

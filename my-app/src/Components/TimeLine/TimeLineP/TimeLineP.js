@@ -27,9 +27,7 @@ function TimeLineP({schoolName,specialization,achievements,time,color,achievemen
     </p>
     <p className="achievements">
     {achievements2}
-    </p>
-  
-  
+    </p> 
   </TimelineItem>
         </div>
     )

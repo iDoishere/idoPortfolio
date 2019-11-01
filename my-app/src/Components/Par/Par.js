@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
 import { Parallax } from 'react-parallax';
-
 import { Collapse, Navbar, NavbarToggler, Nav, NavItem, NavLink } from 'reactstrap';
 import './Par.css'
-
 import TimeLine from '../TimeLine/TimeLine'
 import About from '../About/About';
 import Caro from '../Caro/Caro'
@@ -12,7 +10,9 @@ import Modal from '../Modal/Modal'
 import Footer from '../Footer/Footer'
 import ResumeData from '../../Container/ResumeData'
 import { Wave } from 'react-animated-text';
- import AboutLogo from '../About/AboutLogo/AboutLogo'
+import AboutLogo from '../About/AboutLogo/AboutLogo'
+
+
 class Par extends Component {
   constructor(props) {
     super(props);
@@ -81,8 +81,7 @@ class Par extends Component {
   render() {
 
     const image1 =
-      "https://unsplash.it/1080/720/?image=376";
-
+ "https://sdtimes.com/wp-content/uploads/2014/12/1203.sdt-idc.jpg"
     const {
       resumeData
     } = this.props;
@@ -173,7 +172,7 @@ class Par extends Component {
             </Plx>
           </Parallax >
          
-            <Parallax bgImage={image1} style={{ height:680 }} strength={500}>
+            <Parallax bgImage={image1} style={{ height:620 }} strength={500}>
               <div class="about">
                 <div ref={(MyStory) => { this.MyStory = MyStory; }} >
                   <About resumeData={resumeData}

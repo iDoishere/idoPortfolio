@@ -10,14 +10,12 @@ import chatpic from '../../../images/chatpic.png'
 
 function CaroProject({ name, img, index, description, moreImages, gitLink, live }) {
   let finalImage = '';
-console.log(index)
+
   if (index === '0' ) {
     finalImage = google1;
-
   }
   if (index === '1') {
     finalImage = shopping;
-
   }
   if (index === '2') {
     finalImage = secimageupload;
@@ -28,17 +26,13 @@ console.log(index)
   if (index === '4') {
     finalImage = chatpic;
   }
-
   return (
     <div>
-
       <Card style={{ width: '18rem' }} >
         <div className="card img__wrap">
           <Card.Img alt="smiely" className="img__img" variant="top" src={finalImage} />
           <div className="img__description_layer">
-
             <p className="description">{description}</p>
-
           </div>
         </div>
         <Card.Body className="card-body">
@@ -48,7 +42,6 @@ console.log(index)
             <a href={live} className="button">Live</a>
             <a onClick={moreImages} className="button">Images</a>
           </div>
-
         </Card.Body>
       </Card>
 
