@@ -1,51 +1,30 @@
 import React from 'react'
-import Plx from 'react-plx';
+ 
 import resume from '../../images/resume.pdf'
 import AboutLogo from './AboutLogo/AboutLogo'
-import './About.css'
+import './About.scss'
 
 function About({ resumeData, sortProjects }) {
-  const parallaxData = [
-    {
-      start: 0,
-      end: 500,
-      properties: [
-        {
-          easing: [0.25, 0.1, 0.53, 3],
-          startValue: 0,
-          endValue: 360,
-          property: 'rotate',
-        },
-      ],
-    },
-  ];
+
   return (
     <div>
-      <div id="about">
-        <div  >
-          <Plx
-            className='MyAwesomeParallax'
-            parallaxData={parallaxData}
-          >
-            <img className="profilepic" src='https://cdn1.iconfinder.com/data/icons/website-internet/48/website_-_male_user-512.png' alt="Tim Baker Profile Pic" />
-          </Plx>
-        </div>
-        <div className="titleAbout">
-          <h3>About Me</h3>
+      <div className="about">
+        <div className="about-title">
+          <h3 className="about-title-text">About Me</h3>
           <p>{resumeData.roleDescription}</p>
         </div>
-        <div className="contact-details">
-          <h3 className="contactTitle">Contact Details</h3>
+        <div >
+          <h3 className="about-title-text">Contact Details</h3>
           <div className="my-data">
-            <p> {resumeData.name} </p>
-            <p> {resumeData.address}</p>
-            <p> {resumeData.email}  </p>
+            <h6> {resumeData.name} </h6>
+            <h6> {resumeData.address}</h6>
+            <h6> {resumeData.email}  </h6>
           </div>
   
         </div>
     
-        <div className="Resume1">
-        <a className="Resume" href={resume}>Resume</a>
+        <div className="resume-div">
+        <a className="resume-div-file" href={resume}>Resume</a>
          
         </div>
       </div>

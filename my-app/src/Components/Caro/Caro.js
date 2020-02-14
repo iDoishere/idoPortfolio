@@ -2,27 +2,28 @@ import React from 'react'
 import './Caro.css'
 import CaroProject from '../Caro/CaroProject/CaroProject'
 
-function Caro({ resumePortfolio, moreImages }) {
-
+function Caro({ data, moreImages }) {
+     console.log(data)
   return (
 
     <div className="list" >
       {
-        resumePortfolio.map((project, index) => {
-          console.log(project)
+        data.map((project, index) => {
+          
           return (
-            <div className="listProjects" key={index}>
+          
               <CaroProject
                 name={project.name}
                 description={project.description}
                 img={project.imgurl}
-                // index={index}
+                 role={project.role}
                 index={project.index}
                 gitLink={project.gitLinkGit}
                 live={project.live}
                 moreImages={() => { moreImages(index) }}
+                logos={project.logos}
               />
-            </div>
+         
           )
         })
       }

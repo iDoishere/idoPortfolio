@@ -4,9 +4,9 @@ import MainApp from './Container/MainApp/MainApp'
 
 function App() {
   return (
-    <div  >
+ 
    <MainApp/>
-    </div>
+ 
     
   );
 }

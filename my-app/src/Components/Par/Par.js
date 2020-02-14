@@ -1,231 +1,99 @@
-import React, { Component } from 'react'
-import { Parallax } from 'react-parallax';
-import { Collapse, Navbar, NavbarToggler, Nav, NavItem, NavLink } from 'reactstrap';
-import './Par.css'
-import TimeLine from '../TimeLine/TimeLine'
-import About from '../About/About';
-import Caro from '../Caro/Caro'
-import Plx from 'react-plx';
-import Modal from '../Modal/Modal'
-import Footer from '../Footer/Footer'
+import React, { useState, useEffect, useRef } from 'react';
+
+import './Par.scss'
+
 import ResumeData from '../../Container/ResumeData'
-import { Wave } from 'react-animated-text';
-import AboutLogo from '../About/AboutLogo/AboutLogo'
+import Caro from '../Caro/Caro'
+import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
+import TimeLine from '../TimeLine/TimeLine'
+import Navbar from '../Navbar/Navbar'
+import Stars from '../Stars/Stars'
+const Par = () => {
+  const [data, setArr] = useState('');
+  const [dataProjects, setArrProjects] = useState([]);
+  const [education, setEducationa] = useState([]);
+ 
 
+ 
 
-class Par extends Component {
-  constructor(props) {
-    super(props);
-    this.MyStory = React.createRef();
-    this.MyStoryProjects = React.createRef();
-    this.MyStoryEduction = React.createRef();
-    this.toggleNavbar = this.toggleNavbar.bind(this);
-    this.state = {
-      collapsed: false,
-      ifModal: false,
-      finalImage: '',
-      index: null,
-      portfolioData: [],
-      sortData: []
-    };
-  }
-  toggleNavbar() {
-    this.setState({
-      collapsed: !this.state.collapsed
-    });
-  }
+  //   this.state = {
+  //     collapsed: false,
+  //     ifModal: false,
+  //     finalImage: '',
+  //     index: null,
+  //     data: [],
+  //     projectsData: [],
+  //     color: 'white'
+  //   };
+  
 
-  componentDidMount = () => {
-    this.setState({ portfolioData: ResumeData.portfolio, sortData: ResumeData.portfolio })
-  }
-  moreImages = (index) => {
-    this.setState({ ifModal: !this.state.ifModal, index: index })
-  }
-
-  handleClose = () => {
-    this.setState({ ifModal: !this.state.ifModal })
-  }
-  sortFrontEnd = (sort) => {
-    const sortArray = [...this.state.sortData];
-    const finalArray = sortArray.filter(project => {
-      return project.role === sort
-    })
-    this.setState({ portfolioData: finalArray })
-  }
-
-  sortFullStak = (sort) => {
-    const sortArray = [...this.state.sortData];
-    const finalArray = sortArray.filter(project => {
-      return project.role === sort
-    })
-    this.setState({ portfolioData: finalArray })
-  }
-  sortAll = () => {
-    this.componentDidMount();
-  }
-  checkSort = (sort) => {
-
-    if (sort === 'FRONT-END') {
-      this.sortFrontEnd(sort);
-    }
-    if (sort === 'FULL-STACK') {
-      this.sortFullStak(sort);
-    }
-    if (sort === 'ALL') {
-      this.sortAll(sort);
+  useEffect(() => {
+    setArr(ResumeData)
+  }, []);
+  useEffect(() => {
+    setArrProjects(ResumeData.portfolio)
+    console.log()
+  }, []);
+  useEffect(() => {
+    setEducationa(ResumeData.education)
+    console.log()
+  }, []);
+  const scrollToContent2 = ( ) => {
+    let obj = document.getElementsByClassName('code')[0];
+    if (obj) {
+      window.scrollTo({
+        behavior: "smooth",
+        top: obj.offsetTop    
+      });
     }
   }
-  sortProjects = (sort) => {
-    this.checkSort(sort);
-  }
-  render() {
+  const myFunction = () => {
+    var navbar = document.getElementsByClassName("navbar-off")[0];
+    console.log(window.pageYOffset)
+    var sticky = navbar.offsetTop;
 
-    const image1 =
- "https://sdtimes.com/wp-content/uploads/2014/12/1203.sdt-idc.jpg"
-    const {
-      resumeData
-    } = this.props;
+    if (window.pageYOffset > sticky) {
+        navbar.classList.add("sticky")
+    } else {
+        navbar.classList.remove("sticky");
+    }
+}
+useEffect(() => {
+    window.addEventListener('scroll', myFunction)
+})
+  return (
 
-    const parallaxData = [
-      {
-        start: 'self',
-        end: 500,
-        properties: [
-          {
-            easing: [0.25, 0.1, 0.53, 3],
-            startValue: 0,
-            endValue: 360,
-            property: 'rotate',
-          },
-        ],
-      },
-    ];
-    const phoneData = [
-      {
-        start: 'self',
-        startOffset: 100,
-        duration: 400,
-        easing: [0.25, 0.1, 0.6, 0.1],
-        properties: [
-          {
-            startValue: 90,
-            endValue: 0,
-            property: 'rotate',
-          },
-          {
-            startValue: 0,
-            endValue: 1,
-            property: 'scale',
-          },
-        ],
-      },
-    ];
+    <div>
+      <nav className="navbar-off">
+        <ul className='navbar-off-ul'>
+          <li className="navbar-off-li"><a className='navbar-off-a' 
+          >HOME</a></li>
+          <li className="navbar-off-li"><a className='navbar-off-a' onClick={() => {
+            scrollToContent2()   
+          }}>PROJECTS</a> </li>
 
-    return (
+        </ul>
+      </nav>
+      {/* <Navbar /> */}
+      <Stars data={data} />
+      <div className='code'>
+        <Caro  
+          scrollToContent2={scrollToContent2}
 
-      <div>
-        <Navbar className="Navbar" color="light" light expand="md">
-        <NavbarToggler onClick={this.toggleNavbar} />
-          <Collapse isOpen={this.state.collapsed} navbar>
-            <Nav className="ml-auto" navbar>
-              <div className="nabarBtns">
-                <div className="ul-navbar" >
-                  <a>Home</a>
-                </div>
-                <div className="ul-navbar">
-                  <a onClick={() => { scrollToContent(this.MyStory, { offset: 0, align: 'top', duration: 1000 }) }}>About me</a>
-                </div>
-                <div className="ul-navbar">
-                  <a   onClick={() => { scrollToContent2(this.MyStoryProjects, { offset: 0, align: 'top', duration: 1000 }) }}>My Projects</a>
-                </div>
-                <div className="ul-navbar">
-                  <a   onClick={() => { scrollToContent3(this.MyStoryEduction, { offset: 0, align: 'top', duration: 1000 }) }}>Eduction</a>
-                </div>
-              </div>
-            </Nav>
-          </Collapse>
-        </Navbar>
-        <div>
-          <Parallax className="bgimg1" bgImage={image1} style={{ height: 350 }} strength={500}>
-            <div className="mainInfo">
-              <p className="title">I'm Ido Cohen</p>
-              <p className="title2">Full Stack Developer</p>
-            <div className="titlep">
-            <Wave   text="HTML/CSS | Bootstrap | JavaScript | React |NodeJS | Express | MongoDB" />
-            </div>  
-            </div>
-            <Plx
-              className='MyAwesomeParallax'
-              parallaxData={parallaxData}>
-              <div className='social-network'>
-                <div  >
-                  <a href="https://www.linkedin.com/in/ido-cohen-32617816b/" rel="noopener noreferrer" target="_blank">
-                    <i class="fa fa-linkedin"  ></i>
-                  </a>
-                </div>
-                <div>
-                  <a href="https://github.com/iDoishere?tab=repositories" rel="noopener noreferrer" target="_blank">
-                    <i class="fa fa-git-square"  ></i>
-                  </a>
-                </div>
-              </div>
-            </Plx>
-          </Parallax >
-         
-            <Parallax bgImage={image1} style={{ height:620 }} strength={500}>
-              <div class="about">
-                <div ref={(MyStory) => { this.MyStory = MyStory; }} >
-                  <About resumeData={resumeData}
-                 
-                  />
-                </div>
-              </div>
-            </Parallax >
-          
-          <div ref={(MyStoryProjects) => { this.MyStoryProjects = MyStoryProjects; }}>
-           <AboutLogo    sortProjects={this.sortProjects} />   
-            <Caro MyStoryProjects={this.MyStoryProjects}
-              resumePortfolio={this.state.portfolioData}
-              moreImages={this.moreImages}
-            />
-            {
-              this.state.ifModal ? <Modal
-                index={this.state.index}
-                close={this.handleClose}
-                show={this.state.ifModal}
-                finalImage={this.state.finalImage}
-              /> : ''
-            }
-          </div>
-          <div ref={(MyStoryEduction) => { this.MyStoryEduction = MyStoryEduction; }} >
-            <Plx
-              className='MyAwesomeParallax'
-              parallaxData={phoneData}
-            >
-              <h3 className="projectTitle">Eductio<span>n</span></h3>
-            </Plx>
-            <TimeLine education={resumeData.education} />
-          </div>
-          <Footer />
-        </div>
+          data={dataProjects}
+        // moreImages={this.moreImages}
+        />
       </div>
-    )
-  }
-}
-function scrollToContent(MyStory) {
-  if (MyStory != null) {
-    MyStory.scrollIntoView({ behavior: 'smooth' });
-  }
-}
-function scrollToContent2(MyStory) {
-  if (MyStory != null) {
-    MyStory.scrollIntoView({ behavior: 'smooth' });
-  }
+      <TimeLine education={ education} />
+      {/* <div ref={(MyStoryEduction) => { this.MyStoryEduction = MyStoryEduction; }} >
+     
+          
+        </div>   */}
+      {/* <Footer /> */}
+
+    </div>
+  )
+
 }
 
-function scrollToContent3(MyStory) {
-  if (MyStory != null) {
-    MyStory.scrollIntoView({ behavior: 'smooth' });
-  }
-}
-export default Par
+export default Par;
