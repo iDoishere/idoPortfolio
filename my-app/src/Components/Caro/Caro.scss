@@ -1,0 +1,28 @@
+.list {
+  display: flex;
+  justify-content: space-around;
+  height: 70vh;
+  background-color: #f1f1f1;
+}
+
+@media screen and (max-width: 620px) {
+  .list {
+    align-items: center;
+  
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .list {
+    flex-direction: column;
+    margin-top: 5%;
+    min-height: 211vh;
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (max-width: 375px) and (max-height: 667px) {
+  .list {
+    height: 1500px;
+  }
+}

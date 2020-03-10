@@ -2,10 +2,19 @@
     font-weight: bold;
 
     }
+    .main-fotter{
+        background-color: #76bb7f;
+    }
 
     .divFooter{
     font-size: 4vh;
-
+    display: flex;
+   
+ 
+    font-size: 1.1rem;
+    color: white;
+    text-align: center;
+ 
     }
 
     .footerText::first-letter {        

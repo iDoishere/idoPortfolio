@@ -3,13 +3,15 @@
 
  
 
-.navbar-off, .navbar-off .sticky {
+.navbar-off, .navbar-off  {
         width: 100%;
         height: 60px; 
-        background: rgba(255, 185, 0, 0.85); 
+        background: rgb(255, 255, 255);
+        transition: all 3s;
+        // animation: doIt2 8.71s forwards;
         border-top: 1px solid rgba(255,255,255,.2);
         border-bottom: 1px solid rgba(255,255,255,.2);
-        color: white;
+        color:    rgba(255, 185, 0, 0.85); 
         position: fixed;
         &-ul {
             display: flex;
@@ -50,91 +52,26 @@
         }
        
       }
-      
       .sticky {
         color: white;
         top: 0;
         width: 100%;
         z-index: 600;
-        background: rgb(255, 255, 255);
-        transition: all .5s ease-in;
+        background: rgba(255, 185, 0, 0.85); 
+        // animation: doIt 8.71s forwards;
+        transition: all 3s ease-out;
         color: black;
       }
  
- 
-/*  
- 
-       
-      .titlep{
-      font-size: 3vh;
-      font-weight: bold;
-      }
-      .social-network {
-      display: flex;  
-      justify-content: center;
-      justify-content: space-evenly;    
-      }
-      .social-network i{        
-      font-size:10vh;
-      }
-      h3.projectTitle{    
-         color: black;
-        font-size: 8vh;
-         margin-left: 20%;
-        margin-top: 5vh; 
-        
-        }       
+      @media screen and (max-width: 600px) {
+       .mainInfo-title3 {
+        font-size: 1113vh;
+       }
       
-        .projectTitle::first-letter {
-          color: #76bb7f;     
-         }  
-
-          h3 span{        
-          color: #61b8ff;      
-         }  
-         .social-network {
-          -webkit-animation:social-network 1.5s both;
-                  animation: social-network 1.5s both;
-        } */
-
-/*   
-  section{
-        background-repeat: no-repeat;   
-  } */
-   
-              
- 
-
-      @media screen and (max-width: 800px) {
- 
-  .title{
-          font-size: 6vh;
-     
-     }
-      .titlep{
-        width: 12em;
-        color: aliceblue;
-         font-weight: bold;;
       }
+  
+     
    
-         .ul-navbar{
-                 display: flex;
-                 justify-content: space-evenly;
-                 width: 100%;
-         }
-         .nabarBtns{
-                 width: 21%;
-         }
+     
  
- 
- 
-}
-/* for iphone X */
-@media screen and (max-width: 375px) {
-
-        #about{
-            flex-wrap: wrap;
-            height: 390px;
-        }
-       
-        }
+  

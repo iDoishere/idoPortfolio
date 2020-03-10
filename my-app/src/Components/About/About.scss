@@ -1,82 +1,63 @@
 @mixin TITLE-MAX {
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 700;
-    background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85));
-    -webkit-background-clip: text;
-    color: transparent;
-    font-size: 2rem;
-    display: inline-block; 
-  }
+  background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85));
+  -webkit-background-clip: text;
+  color: transparent;
+}
 .about {
-display: flex;
-background: #2B2B2B;
-padding-top: 2%;
-justify-content: space-evenly;
-height:190px;
-color: white;
-&-title {
-    width: 30em;
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  min-height: 46vh;
+
+  &-title {
+    width: 20em;
+    font-weight: bold;
+    height: 167px;
+    overflow: hidden;
+  }
+  &-title1 {
+    height: 150px;
+    font-weight: bold;
+  }
+  &-title-text::first-letter {
+    @include TITLE-MAX;
+  }
 }
-&-title-text::first-letter {
-@include TITLE-MAX;
+
+.my-data {
+  display: flex;
+  flex-direction: column;
 }
- /*  */
+.resume-div {
+  height: 150px;
+  margin-top: 3%;
+  &-file {
+    padding: 3vh 7vh;
+    color: rgb(255, 255, 255);
+    box-shadow: rgba(255, 255, 255, 0.979) 0 0px 0px 2px inset;
+    transition: all 3000ms cubic-bezier(0.39, 0.1, 0.15, 1);
+    justify-content: center;
+  }
+  &-file:hover {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.85);
+    box-shadow: rgba(255, 185, 0, 0.85) 0 0px 0px 40px inset;
+  }
 }
- .resume-div{
-     /* text-align: center; */
-     align-items: center;
-     display: flex;
-     margin-bottom: 2%;
-     &-file {
-        padding:3vh 7vh;   
-        color: rgb(255, 255, 255);
-        box-shadow: rgba(255, 255, 255, 0.979) 0 0px 0px 2px inset;  
-        transition: all 3000ms cubic-bezier(0.390, 0.100, 0.150, 1);
-        justify-content: center;
-       
-     }
-     &-file:hover {
-        text-decoration: none;  
-        color: rgba(255, 255, 255, 0.85);
-        box-shadow: rgba(255, 185, 0, 0.85) 0 0px 0px 40px inset;
-     }
-    
- } 
+
 @media screen and (max-width: 800px) {
-
-#about{
+  .about {
+    text-align: center;
+  }
+  .resume-div-file {
+    padding: 2vh 3vh;
+  }
+}
+@media screen and (max-width: 650px) {
+  .about {
     flex-wrap: wrap;
-    height: 365px;
+  }
+  .resume-div-file {
+    padding: 1vh 1vh;
+  }
 }
-    .profilepic{  
-        width: 10vh;    
-    }
-    .titleAbout{
-        width:100em;
-        text-align: center
-        ;
-        }
-    h3.contactTitle{
-        text-align: center;
-        font-size:3vh;;
-    }
-    a.Resume {
-        padding:1vh 3vh;   
-      
-    }
-    .Resume1{
-        margin-bottom: 8%;
-            text-align: center;
-           
-        } 
-}
-
-@media screen and (max-width: 375px) {
-
-    #about{
-        flex-wrap: wrap;
-        height: 390px;
-    }
-   
-    }

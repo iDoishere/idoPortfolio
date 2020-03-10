@@ -5,6 +5,7 @@
   "dependencies": {
     "@react-spring/addons": "^9.0.0-beta.33",
     "bootstrap": "^4.3.1",
+    "firebase-tools": "^7.14.0",
     "node-sass": "^4.13.1",
     "react": "^16.8.6",
     "react-animated-text": "^0.1.4",

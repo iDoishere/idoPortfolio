@@ -6,90 +6,97 @@ import ResumeData from '../../Container/ResumeData'
 import Caro from '../Caro/Caro'
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
 import TimeLine from '../TimeLine/TimeLine'
-import Navbar from '../Navbar/Navbar'
+import Modal from '../Modal/Modal'
+import Footer from '../Footer/Footer'
 import Stars from '../Stars/Stars'
 const Par = () => {
   const [data, setArr] = useState('');
   const [dataProjects, setArrProjects] = useState([]);
   const [education, setEducationa] = useState([]);
- 
+  const [ifModal, setModal] = useState(false);
+  const [index, setIndex] = useState(0);
 
- 
-
-  //   this.state = {
-  //     collapsed: false,
-  //     ifModal: false,
-  //     finalImage: '',
-  //     index: null,
-  //     data: [],
-  //     projectsData: [],
-  //     color: 'white'
-  //   };
-  
 
   useEffect(() => {
-    setArr(ResumeData)
-  }, []);
+     window.addEventListener('scroll', scrollEvent);
+    setArr(ResumeData);
+  },[])
   useEffect(() => {
     setArrProjects(ResumeData.portfolio)
-    console.log()
   }, []);
   useEffect(() => {
     setEducationa(ResumeData.education)
-    console.log()
   }, []);
-  const scrollToContent2 = ( ) => {
-    let obj = document.getElementsByClassName('code')[0];
+
+  const moreImages = (updatedIndex) => {
+    console.log('aadas')
+    setModal(ifModal => !ifModal)
+    setIndex(index => updatedIndex);
+  }
+  const handleClose = () => {
+    setModal(ifModal => !ifModal)
+  }
+  const setScroll = (val) => {
+    let obj = document.getElementsByClassName(val)[0];
     if (obj) {
       window.scrollTo({
         behavior: "smooth",
-        top: obj.offsetTop    
+        top: obj.offsetTop
       });
     }
   }
-  const myFunction = () => {
+  const scrollEvent = () => {
     var navbar = document.getElementsByClassName("navbar-off")[0];
-    console.log(window.pageYOffset)
     var sticky = navbar.offsetTop;
-
     if (window.pageYOffset > sticky) {
-        navbar.classList.add("sticky")
+      navbar.classList.add("sticky")
     } else {
-        navbar.classList.remove("sticky");
+      navbar.classList.remove("sticky");
     }
-}
-useEffect(() => {
-    window.addEventListener('scroll', myFunction)
-})
+  }
   return (
-
     <div>
       <nav className="navbar-off">
         <ul className='navbar-off-ul'>
-          <li className="navbar-off-li"><a className='navbar-off-a' 
+          <li className="navbar-off-li"><a className='navbar-off-a' onClick={() => {
+            setScroll('navbar-off')
+          }}
           >HOME</a></li>
           <li className="navbar-off-li"><a className='navbar-off-a' onClick={() => {
-            scrollToContent2()   
+            setScroll('projects-div')
           }}>PROJECTS</a> </li>
+          <li className="navbar-off-li"><a className='navbar-off-a' onClick={() => {
+            setScroll('education-div')
+          }}>EDUCATION</a> </li>
 
         </ul>
       </nav>
       {/* <Navbar /> */}
       <Stars data={data} />
-      <div className='code'>
-        <Caro  
-          scrollToContent2={scrollToContent2}
+      <div className='projects-div'>
+        <Caro
 
           data={dataProjects}
-        // moreImages={this.moreImages}
+          moreImages={moreImages}
         />
       </div>
-      <TimeLine education={ education} />
+      <div className='education-div'>
+        <TimeLine education={education} />
+      </div>
+     
+      {ifModal ? <Modal
+        index={ index}
+        close={ handleClose}
+        show={ifModal}
+        // finalImage={this.state.finalImage}
+      />
+
+        : ''}
       {/* <div ref={(MyStoryEduction) => { this.MyStoryEduction = MyStoryEduction; }} >
      
           
         </div>   */}
-      {/* <Footer /> */}
+      <Footer />
 
     </div>
   )

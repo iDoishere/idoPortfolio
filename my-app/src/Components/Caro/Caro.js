@@ -1,5 +1,5 @@
 import React from 'react'
-import './Caro.css'
+import './Caro.scss'
 import CaroProject from '../Caro/CaroProject/CaroProject'
 
 function Caro({ data, moreImages }) {

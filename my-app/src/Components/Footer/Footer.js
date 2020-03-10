@@ -3,28 +3,28 @@ import React from 'react'
 import StickyFooter from 'react-sticky-footer';
 import './Footer.css'
 import ScrollUpButton from "react-scroll-up-button"; //Add this line Here
- 
 
- const Footer = () => {
+
+const Footer = () => {
     return (
-        <div className="footer">
-    <StickyFooter className="footer"
-    bottomThreshold={40} 
-    normalStyles={{
-    backgroundColor: "#999999",
-    padding: "0.2rem"
-    }}
-    stickyStyles={{
-    backgroundColor: "rgba(255,255,255,.8)",
-    padding: "0.50rem"
-    }}
->
-    <div className="divFooter">
-    <p className="footerText">Designed By Ido Cohe<span className="span">n</span></p>
-   </div>
+        <div >
+            <StickyFooter
+                bottomThreshold={100}
+                normalStyles={{
+                    backgroundColor: "#999999",
+                    padding: "2rem",
+                    width:'100%',
+                  
+                }}
+                stickyStyles={{
+                    backgroundColor: "#999999",
+                    padding: "2rem",
+                    height:'8%'
+                }}
+            >
+            <p>Design by Ido Cohen</p>
 </StickyFooter>
-
-<ScrollUpButton />
+            {/* <ScrollUpButton /> */}
         </div>
     )
 }
