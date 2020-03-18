@@ -31,7 +31,7 @@ let resumeData = {
       {
         "UniversityName":"John Brice",
         "Time":"2018-2019",
-        "Color": '#76bb7f',
+        "Color": '#FF4500',
         "ifColor": 0,
         "specialization":"Full-Stack web",
         "MonthOfPassing":"Aug",
@@ -42,7 +42,7 @@ let resumeData = {
       {
         "UniversityName":"Afeka (Technology and Engineering education)   ",
         "Time":"2016-2018",
-        "Color": '#61b8ff',
+        "Color": '#FF4500',
         "specialization":"Practical Engineering software. ",
         "MonthOfPassing":"Jan",
         "YearOfPassing":"2018",

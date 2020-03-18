@@ -13,7 +13,7 @@ class ModalUi extends Component {
     } = this.props;
     return (
       <div >
-        <Modal  className='ido' size="lg" show={show} onHide={close}  >
+        <Modal size="lg" show={show} onHide={close}  >
           <Modal.Header    closeButton>
             <Modal.Title>Image Gallery</Modal.Title>
           </Modal.Header>

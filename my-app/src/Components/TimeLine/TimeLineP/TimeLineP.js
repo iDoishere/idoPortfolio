@@ -1,17 +1,17 @@
 import React from 'react'
 import {  TimelineItem }  from 'vertical-timeline-component-for-react';
-import './TimeLineP.css'
+import './TimeLineP.scss'
 
 function TimeLineP({schoolName,specialization,achievements,time,color,achievements2,ifcolor}){
 
-    let status = ifcolor === 0 ? "schoolName" : "schoolName1"
+ 
     return (
         <div>
  <TimelineItem  
-      dateInnerStyle={{ background: color}}
+      dateInnerStyle={{ background:  '#000' }}
     bodyContainerStyle={{
         
-      background: '#ddd',
+      background: '#f1f1f1',
       padding: '20px',
       borderRadius: '8px',
       boxShadow: '0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2)',
@@ -20,8 +20,8 @@ function TimeLineP({schoolName,specialization,achievements,time,color,achievemen
     dateText={time}
     
   >
-    <h3 className={status}>{schoolName}</h3>
-    <h4 className={status}>{specialization}</h4>
+    <h2 className={'schoolName'}>{schoolName}</h2>
+    <h5 className={'schoolName'}>{specialization}</h5>
     <p className="achievements">
     {achievements}
     </p>

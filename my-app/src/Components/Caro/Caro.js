@@ -3,7 +3,7 @@ import './Caro.scss'
 import CaroProject from '../Caro/CaroProject/CaroProject'
 
 function Caro({ data, moreImages }) {
-     console.log(data)
+  
   return (
 
     <div className="list" >
@@ -12,7 +12,7 @@ function Caro({ data, moreImages }) {
           
           return (
           
-              <CaroProject
+              <CaroProject key={index}
                 name={project.name}
                 description={project.description}
                 img={project.imgurl}

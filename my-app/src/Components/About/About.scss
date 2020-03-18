@@ -1,7 +1,10 @@
-@mixin TITLE-MAX {
+@mixin FIRST-LETTER {
   background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85));
   -webkit-background-clip: text;
   color: transparent;
+}
+a{
+ 
 }
 .about {
   display: flex;
@@ -18,9 +21,20 @@
   &-title1 {
     height: 150px;
     font-weight: bold;
+    &-content {
+      font-size: 1.1rem;
+      color: white;
+    }
+    &-content::first-letter {
+      font-size: 1.1rem;
+      @include FIRST-LETTER;
+    }
   }
   &-title-text::first-letter {
-    @include TITLE-MAX;
+    @include FIRST-LETTER;
+  }
+  &-title-text {
+   letter-spacing: 3px;
   }
 }
 
@@ -45,15 +59,19 @@
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   .about {
     text-align: center;
   }
   .resume-div-file {
     padding: 2vh 3vh;
   }
+  .about-title1-content{
+    font-size: 0.9rem;
+  }
 }
-@media screen and (max-width: 650px) {
+// }
+@media screen and (max-width: 670px) {
   .about {
     flex-wrap: wrap;
   }

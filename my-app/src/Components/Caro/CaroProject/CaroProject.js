@@ -1,10 +1,7 @@
 import React from 'react'
-import { Card } from 'react-bootstrap';
 import './CaroProject.scss'
 import weather from '../../../images/weather.png'
 import shopping from '../../../images/shopping1.png'
-import google1 from '../../../images/google1.png'
-import youtubelogo from '../../../images/youtubelogo.png'
 import chatpic from '../../../images/chatpic.png'
 
 
@@ -23,7 +20,7 @@ function CaroProject({ name, img, index, logos, moreImages, gitLink, live, role,
   }
   const allLogos = logos.map((val, i) => {
     return (
-      <img className='img-logo' src={val.url}></img>
+      <img key={i} alt="smiely" className='img-logo' src={val.url}></img>
     )
   })
   return (
@@ -55,7 +52,7 @@ function CaroProject({ name, img, index, logos, moreImages, gitLink, live, role,
          <div className="main-card_side--back-link">
            <a href={gitLink} className="main-card_side--back-a">Git</a>
            <a href={live} className="main-card_side--back-a">Live</a>
-           <a onClick={() => moreImages(index)} className="main-card_side--back-a">Images</a>
+           <a href='!#' onClick={() => moreImages(index)} className="main-card_side--back-a">Images</a>
          </div>
        </div>
     </div>
@@ -63,20 +60,4 @@ function CaroProject({ name, img, index, logos, moreImages, gitLink, live, role,
   )
 }
 export default CaroProject;
-
-{/* <Card style={{ width: '18rem' }} >
-        <div className="card img__wrap">
-          <Card.Img alt="smiely" className="img__img" variant="top" src={finalImage} />
-          <div className="img__description_layer">
-            <p className="description">{description}</p>
-          </div>
-        </div>
-        <Card.Body className="card-body">
-          <Card.Title>{name}</Card.Title>
-          <div className="btns">
-            <a href={gitLink} className="button">Git</a>
-            <a href={live} className="button">Live</a>
-            <a onClick={moreImages} className="button">Images</a>
-          </div>
-        </Card.Body>
-      </Card> */}
+ 

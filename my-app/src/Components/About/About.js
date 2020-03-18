@@ -8,15 +8,15 @@ function About({ resumeData }) {
   return (
     <div className="about">
       <div className="about-title">
-        <h3 className="about-title-text">About Me</h3>
-        <p>{resumeData.roleDescription}</p>
+        <h4 className="about-title-text">About Me</h4>
+        <p className='about-title1-content'>{resumeData.roleDescription}</p>
       </div>
       <div className="about-title1">
         <div className="my-data">
-          <h3 className="about-title-text">Contact Details</h3>
-          <span> {resumeData.name} </span>
-          <span> {resumeData.address}</span>
-          <span> {resumeData.email}  </span>
+          <h4 className="about-title-text">Contact Details</h4>
+          <a href="!#"  className='about-title1-content'> {resumeData.name} </a>
+          <a href="!#" className='about-title1-content'> {resumeData.address}</a>
+          <a href="!#" className='about-title1-content'> {resumeData.email}  </a>
         </div>
       </div>
       <div className="resume-div">
