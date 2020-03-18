@@ -164,9 +164,14 @@
 
 @media screen and (max-width: 620px) {
   #background {
-  min-height: 119vh;
+  min-height: 100vh;
   }
-}  
+} 
+@media screen and (max-width: 550px) {
+  #background {
+  min-height: 110vh;
+  }
+} 
 @media screen and (max-width: 400px) {
   .navbar-off-ul {
     margin-left: -34px;
