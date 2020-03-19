@@ -11,7 +11,6 @@ function TimeLine({education}) {
  <Timeline>
        {
          education.map((info,index) => {
-    
            return (
              <TimeLineP
              schoolName = {info.UniversityName}

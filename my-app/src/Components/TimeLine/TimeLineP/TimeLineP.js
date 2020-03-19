@@ -30,10 +30,8 @@ arr.push(htmllogo,csslogo,sasslogo,jslogo,reactlogo,reduxlogo,nodelogo)
         }}
         key="001"
         dateText={time}>
-
         <h4 className={'schoolName'}>{schoolName}</h4>
         <h5 className={'schoolName'}>{schoolName2}</h5>
-
         <div className='timeline-content'>
           {
            ifcolor === 1 ?
@@ -41,9 +39,7 @@ arr.push(htmllogo,csslogo,sasslogo,jslogo,reactlogo,reduxlogo,nodelogo)
                 arr.map((val, i) => {
                   return (
                     <img key={i} alt="smiely" className='timeline-content-front-logos-all' src={val}></img>
-                  )
-                }) 
-             
+                  )})  
             :<p className='achievements'>{achievements}</p>
            }
         </div>
@@ -51,5 +47,4 @@ arr.push(htmllogo,csslogo,sasslogo,jslogo,reactlogo,reduxlogo,nodelogo)
     </div>
   )
 }
-
 export default TimeLineP;

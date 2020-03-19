@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Par from '../../Components/Par/Par'
-import resumeData from '../ResumeData';
+import resumeData from '../../ResumeData';
 
 
 class MainApp extends Component {
