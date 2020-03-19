@@ -12,7 +12,6 @@ const MainFooter = () => {
 
   const sendToFirebase = (e) => {
     const obj = { name, email, choose, message }
-    console.log(obj)
     axios.post('contact.json', { obj })
       .then(response => {
         if (response.status === 200) {

@@ -1,5 +1,5 @@
 import React from 'react'
-import resume from '../../images/idocv.pdf'
+import resume from '../../assets/images/idocv.pdf'
 import './About.scss'
 
 

@@ -11,12 +11,12 @@ function TimeLine({education}) {
  <Timeline>
        {
          education.map((info,index) => {
+    
            return (
              <TimeLineP
              schoolName = {info.UniversityName}
-             specialization={info.specialization}
+             schoolName2={info.UniversityName2}
              achievements = {info.Achievements}
-             achievements2 = {info.Achievements2}
              time={info.Time}
              color = {info.Color}
              ifcolor = {info.ifColor}

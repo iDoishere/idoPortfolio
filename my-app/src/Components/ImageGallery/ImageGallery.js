@@ -1,16 +1,16 @@
 import React from 'react'
-import Gallery from "react-photo-gallery";
- 
-import firstShoppingLogo from '../../images/firstshoplogo.png'
-import secshoplogo from '../../images/secshoplogo.png'
-import thirdshoplogo from '../../images/thirdshoplogo.png'
-import fourshoplogo from '../../images/fourshoplogo.png'
-import shopping1 from '../../images/shopping1.png'
-
-import firstimageupload from '../../images/weather.png'
-import secimageupload from '../../images/weather11.png'
- import chat from '../../images/chatpic.png'
 import './ImageGallery.css'
+
+import Gallery from "react-photo-gallery";
+import firstShoppingLogo from '../../assets/images/firstimageupload.png'
+import secshoplogo from '../../assets/images/secshoplogo.png'
+import thirdshoplogo from '../../assets/images/thirdshoplogo.png'
+import fourshoplogo from '../../assets/images/fourshoplogo.png'
+import shopping1 from '../../assets/images/shopping1.png'
+import firstimageupload from '../../assets/images/weather.png'
+import secimageupload from '../../assets/images/weather11.png'
+import chat from '../../assets/images/chatpic.png'
+
 
 function ImageGalleryUi({ index }) {
   let photos = null;

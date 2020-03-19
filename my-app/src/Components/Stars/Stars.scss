@@ -18,7 +18,7 @@
   left: 0;
   right: 0;
   min-height: 88vh;
-  background: black url(../../images1/foreground.png);
+  background: black url(../../assets/images1/foreground.png);
   animation-name: STAR-MOVE;
   animation-duration: 650s;
   animation-delay: 0;
@@ -35,19 +35,17 @@
   width: 100%;
   background: transparent;
   transition: all 3s;
-
   position: fixed;
   &-ul {
       display: flex;
     justify-content: center;
       li {
-          list-style: none;    
+          list-style: none;        
       }
   }
- 
   &-a{
     display: block;
-    color:    rgba(255, 185, 0, 0.85); 
+    color: white;
     padding: 0 20px;
     text-transform:uppercase ;
     font-weight: bold;
@@ -57,7 +55,6 @@
 &-a:hover,
 &-a:active,
 &-a.active {
-  color: white;
   text-decoration: none;
 }
 &-a::after {
@@ -66,8 +63,7 @@
   display: block;
   width: 0;
   height: 2px;
-  background:  darkred;
- 
+  background:  blue;
 }
 
 &-a:hover::after {
@@ -75,18 +71,16 @@
     width: 49px;
      transition: ease-in-out .6s;
   }
- 
 }
+
 .sticky {
-  color: white;
   top: 0;
   width: 100%;
   z-index: 600;
   background: rgba(255, 185, 0, 0.85); 
-  // animation: doIt 8.71s forwards;
   transition: all 3s ease-out;
-  color: black;
 }
+
 .mainInfo {
   display: flex;
   flex-direction: column;
@@ -169,12 +163,17 @@
 } 
 @media screen and (max-width: 550px) {
   #background {
-  min-height: 110vh;
+  min-height: 112vh;
   }
 } 
 @media screen and (max-width: 400px) {
   .navbar-off-ul {
     margin-left: -34px;
   }
+}
+@media screen and (max-width: 375px) {
+  #background {
+    min-height: 115vh;
+    }
 }
  

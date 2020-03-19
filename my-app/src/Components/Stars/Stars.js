@@ -4,17 +4,14 @@ import './Stars.scss'
 
 export default function Stars({ data,scrollToDiv }) {
 
-
   const setScroll = (str) => {   
     scrollToDiv(str);
   }
-
   return (
     <div>
       <div id="background">
         <nav className="navbar-off">
           <ul className='navbar-off-ul'>
- 
             <li className="navbar-off-li"><a  href="#!" className='navbar-off-a' onClick={(e) => {
               setScroll('projects-div')
             }}>PROJECTS</a> </li>

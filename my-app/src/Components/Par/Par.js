@@ -62,9 +62,7 @@ const Par = () => {
   }
 
   const scrollToDiv = (val) => {
-     
     let obj = document.getElementsByClassName(val)[0];
- 
     window.scrollTo({
       behavior: "smooth",
       top: obj.offsetTop 
@@ -92,8 +90,7 @@ const Par = () => {
         : ''}
            <div className="contact-div">
            <MainFooter/>
-           </div>
-    
+           </div> 
        <ScrollUp /> 
     </div>
   )

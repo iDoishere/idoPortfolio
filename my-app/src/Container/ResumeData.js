@@ -32,18 +32,16 @@ let resumeData = {
         "UniversityName":"John Brice",
         "Time":"2018-2019",
         "Color": '#FF4500',
-        "ifColor": 0,
+        "ifColor": 1,
         "specialization":"Full-Stack web",
         "MonthOfPassing":"Aug",
         "YearOfPassing":"2020",
-        "Achievements":"BACK - END : Node.js, MongoDB, express",
-        "Achievements2":"FRONT - END : React, Redux, Bootstrap, Flex-box/Grid"
       },
       {
-        "UniversityName":"Afeka (Technology and Engineering education)   ",
-        "Time":"2016-2018",
+        "UniversityName":"Kirya",
+        "UniversityName2":"Engineering and Technology Studies",
+        "Time":"2016-2019",
         "Color": '#FF4500',
-        "specialization":"Practical Engineering software. ",
         "MonthOfPassing":"Jan",
         "YearOfPassing":"2018",
         "Achievements":"Final project (Android app using Firebase), Smartphone app. Its purpose is to provide users with preliminary information about places of entertainment and to help them choose according to their personal record where to go according to the information that will be shared in the application in real time by the users present."
