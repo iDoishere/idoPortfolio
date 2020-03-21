@@ -59,10 +59,7 @@ const MainFooter = () => {
           answer.innerText = 'server issues'
 
         });
-    }else {
-      console.log('11111')
     }
-
   }
 
   return (
@@ -104,7 +101,6 @@ const MainFooter = () => {
               </div>
             </div> : <h5 className='user-answer'></h5>
           }
-
         </div>
         <div className='mainf-sec-col-2'>
           <h4 className='mainf-sec-col-2-title'>Get in Touch</h4>
