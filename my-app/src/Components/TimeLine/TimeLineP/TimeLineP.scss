@@ -26,6 +26,12 @@
         display: flex;
         justify-content: space-evenly;
         margin-top: 20px;
+        &-all {
+          &:hover {
+            transform: scale(0.7);
+            transition: all 0.2s ease;
+          }
+        }
       }
     }
   }
@@ -33,6 +39,9 @@
 @media screen and (max-width: 375px) {
   .schoolName {
   text-align: center;
+    }
+    .timeline-content {
+      width: 70%;
     }
 }
  
