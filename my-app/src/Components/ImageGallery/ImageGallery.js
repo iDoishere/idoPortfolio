@@ -10,6 +10,9 @@ import shopping1 from '../../assets/images/shopping1.png'
 import firstimageupload from '../../assets/images/weather.png'
 import secimageupload from '../../assets/images/weather11.png'
 import chat from '../../assets/images/chatpic.png'
+import socialmedia from '../../assets/images/socialmedia.png'
+import socialmedia2 from '../../assets/images/socialmedia2.png'
+import socialmedia3 from '../../assets/images/socialmedia3.png'
 
 
 function ImageGalleryUi({ index }) {
@@ -68,6 +71,25 @@ function ImageGalleryUi({ index }) {
         src: chat,
         width: 1,
         height: 1
+      },
+    ];
+  }
+  if (index === 3) {
+    photos = [
+      {
+        src: socialmedia,
+        width: 2,
+        height:2
+      },
+      {
+        src: socialmedia2,
+        width: 3,
+        height: 2
+      },
+      {
+        src: socialmedia3,
+        width: 3,
+        height: 3
       },
     ];
   }

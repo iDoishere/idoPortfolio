@@ -19,9 +19,19 @@ const Par = () => {
   const [ifModal, setModal] = useState(false);
   const [index, setIndex] = useState(0);
  
-
+  
+  const scrollEvent = () => {
+    var navbar = document.getElementsByClassName("navbar-off")[0];
+    var sticky = navbar.offsetTop;
+    if (window.pageYOffset > sticky) {
+      navbar.classList.add("sticky")
+    } else {
+      navbar.classList.remove("sticky");
+    }
+  }
+  window.addEventListener('scroll', scrollEvent);
   useEffect (()  =>  {
-    window.addEventListener('scroll', scrollEvent);
+  
     setArr(ResumeData);
     let date = new Date();
     date.setHours(date.getHours() + 2)
@@ -41,8 +51,8 @@ const Par = () => {
     setEducationa(ResumeData.education)
   }, []);
 
-  const moreImages = (updatedIndex) => {
-    console.log(updatedIndex)
+  const moreImages = (e,updatedIndex) => {
+    e.preventDefault()
     setModal(ifModal => !ifModal)
     setIndex(index => updatedIndex);
   }
@@ -51,15 +61,7 @@ const Par = () => {
      setModal(ifModal => !ifModal)
   }
 
-  const scrollEvent = () => {
-    var navbar = document.getElementsByClassName("navbar-off")[0];
-    var sticky = navbar.offsetTop;
-    if (window.pageYOffset > sticky) {
-      navbar.classList.add("sticky")
-    } else {
-      navbar.classList.remove("sticky");
-    }
-  }
+
 
   const scrollToDiv = (val) => {
     let obj = document.getElementsByClassName(val)[0];
@@ -73,12 +75,13 @@ const Par = () => {
       <Stars data={data}  
       scrollToDiv={scrollToDiv}
       />
-      <div className='projects-div'>
+    
         <Caro
           data={dataProjects}
           moreImages={moreImages}
         />
-     </div>
+    
+   
         <div className='education-div'>
         <TimeLine education={education} />
         </div>

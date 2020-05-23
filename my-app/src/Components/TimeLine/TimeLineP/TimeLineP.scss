@@ -2,13 +2,13 @@
   color: rgba(255, 185, 0, 0.85);
   display: flex;
   justify-content: center;
+  font-family: "Kalam", cursive;
 }
 .achievements {
   display: flex;
-  font-family: "Times New Roman", Times, serif;
-  font-weight: bold !important;
   font-size: 3vh;
   text-align: center;
+  font-family: "Kalam", cursive;
 }
 .timeline {
   max-width: 1000px;
@@ -27,21 +27,44 @@
         justify-content: space-evenly;
         margin-top: 20px;
         &-all {
+          filter: grayscale(100%);
           &:hover {
-            transform: scale(0.7);
+            transform: scale(1.3);
             transition: all 0.2s ease;
+            filter: grayscale(0);
           }
         }
       }
     }
   }
 }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+@media screen and (max-width: 400px) {
+  .timeline-content {
+    justify-content: center;
+  }
+}
 @media screen and (max-width: 375px) {
   .schoolName {
-  text-align: center;
-    }
-    .timeline-content {
-      width: 70%;
-    }
+    text-align: center;
+  }
 }
- 

@@ -4,11 +4,12 @@ import CaroProject from '../Caro/CaroProject/CaroProject'
 import weather from '../../assets/images/weather.png'
 import shopping from '../../assets/images/shopping1.png'
 import chatpic from '../../assets/images/chatpic.png'
+import socialMedia from '../../assets/images/socialmedia.png'
 
 function Caro({ data, moreImages }) {
   const mainImgArray = [];
 
-  mainImgArray.push(weather, shopping, chatpic)
+   mainImgArray.push(shopping,weather, chatpic,socialMedia)
 
   return (
 
@@ -24,14 +25,18 @@ function Caro({ data, moreImages }) {
                 index={project.index}
                 gitLink={project.gitLinkGit}
                 live={project.live}
-                moreImages={() => { moreImages(index) }}
+                moreImages={(e) => { moreImages(e,index) }}
                 logos={project.logos}
+                isLive={project.isLive}
+                img={project.img}
+                tools={project.Tools}
                 mainImgArray={mainImgArray}
               /> 
           )
         })
       }
     </div>
+ 
 
 
 
