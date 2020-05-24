@@ -30,7 +30,7 @@ let resumeData = {
     "education":[
       {
         "UniversityName":"John Brice",
-        "Time":"2018-2019",
+        "Time":"2019-2020",
         "Color": '#FF4500',
         "ifColor": 1,
         "specialization":"Full-Stack web",
@@ -44,7 +44,7 @@ let resumeData = {
         "Color": '#FF4500',
         "MonthOfPassing":"Jan",
         "YearOfPassing":"2018",
-        "Achievements":"Final project (Android app using Firebase), Smartphone app using Goole Maps. Its purpose is to provide users with preliminary information about places of entertainment and to help them choose according to their personal record where to go according to the information that will be shared in the application in real time by the users present : sign in with Facebook and Gmail."
+        "Achievements":"Final project (Android app using Firebase), Smartphone app using Goole Maps. Its purpose is to provide users with preliminary information about places of entertainment and to help them choose according to their personal record where to go according to the information that will be shared in the application in real time by the users present "
       }
     ],
     "portfolio":[

@@ -8,11 +8,12 @@
   display: flex;
   justify-content: space-around;
   color: white;
+  text-align: center;
  
   &-title {
-    width: 20em;
+    width: 30em;
     font-weight: bold;
-    height: 167px;
+   
     overflow: hidden;
   }
   &-title1 {
@@ -35,7 +36,7 @@
   }
   &-title-text {
    letter-spacing: 3px;
-   font-family: 'Kalam', cursive;
+ 
   }
 }
 
@@ -44,7 +45,7 @@
   flex-direction: column;
 }
 .resume-div {
-  height: 20px;
+  margin-top: 7vh;
   font-family: 'Kalam', cursive;
   &-file {
     padding: 2vh 5vh;
@@ -59,17 +60,7 @@
     box-shadow: rgba(255, 185, 0, 0.85) 0 0px 0px 40px inset;
   }
 }
-
-.example-appear {
-  opacity: 0.01;
-}
-
-.example-appear.example-appear-active {
-  opacity: 1;
-  transition: opacity 1.9s ease-in;
-}
-
-
+ 
 @media screen and (max-width: 900px) {
   .about {
     text-align: center;

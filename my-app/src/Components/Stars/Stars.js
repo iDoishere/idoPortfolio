@@ -48,9 +48,13 @@ export default function Stars({ data, scrollToDiv }) {
           <div className="typewriter">
             <h1>Im Ido Cohen</h1>
           </div>
+          <div className="mainInfo-content">
           {getScrollAnimationtitle()}  
+          {getScrollAnimationdata()}  
+          </div>
+         
 
-           {getScrollAnimationdata()}  
+        
         </div>
         <About resumeData={data} />
       </div>

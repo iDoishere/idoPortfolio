@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './CaroProject.scss'
 import ReactCardFlip from 'react-card-flip';
 
-const CaroProject = ({ name, mainImgArray, index, logos, moreImages, gitLink, live, role, description, isLive ,tools}) => {
+const CaroProject = ({ name, mainImgArray, index, logos, moreImages, gitLink, live, role, description, isLive, tools }) => {
   const [ifFlip, setIfFlip] = useState(false);
 
   const handleClick = () => {
@@ -11,7 +11,7 @@ const CaroProject = ({ name, mainImgArray, index, logos, moreImages, gitLink, li
 
   const allLogos = logos.map((val, i) => {
     return (
-      <img   key={i} alt="smiely" className='main-card-front-logo-img' src={val.url}></img>
+      <img key={i} alt="smiely" className='main-card-front-logo-img' src={val.url}></img>
     )
   })
 
@@ -19,8 +19,8 @@ const CaroProject = ({ name, mainImgArray, index, logos, moreImages, gitLink, li
     <ReactCardFlip isFlipped={ifFlip} flipDirection="vertical">
       <div className='main-card-front'>
         <div className='main-card-front-header'>
-          <h5 className='main-card-val'>{name}</h5>
-          <h6 className='main-card-val-role'> {role} </h6>
+          <h5 className='main-card-front-header-name'>{name}</h5>
+          <h6> {role} </h6>
         </div>
         <div>
           <img width='100%' alt="smiely" className="main-card--img" variant="top" src={mainImgArray[index]} />
@@ -38,15 +38,14 @@ const CaroProject = ({ name, mainImgArray, index, logos, moreImages, gitLink, li
         <div className='main-card-back-description'>
           {description}
 
-     
+
         </div>
         <div className='main-card-back-tools'>
-        <span>Tools</span>
-        {tools}
+          <span>Tools</span>
+          {tools}
         </div>
 
         <div className='main-card-back-btns'>
-
           <div className="resume-div1">
             <a className="resume-div1-file1" href={gitLink}>Git</a>
           </div>
@@ -60,8 +59,7 @@ const CaroProject = ({ name, mainImgArray, index, logos, moreImages, gitLink, li
         </div>
 
         <div>
-          <button  className='main-card-front-btn' onClick={handleClick}>Click to flip</button>
-
+          <button className='main-card-front-btn' onClick={handleClick}>Click to flip</button>
         </div>
       </div>
     </ReactCardFlip>

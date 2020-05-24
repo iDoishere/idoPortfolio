@@ -13,6 +13,19 @@ const MainFooter = () => {
   const [message, setMessage] = useState('');
   const [hidden, setHidden] = useState(false);
 
+  function validateEmail() {
+    let emailCheck =false;
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    emailCheck = re.test(String(email).toLowerCase());
+     
+     if(emailCheck){
+       return emailCheck;
+     }else{
+      document.querySelector('.input-email').style.border = '1px solid red';
+      return emailCheck;
+     }
+}
+
 
   const inputCheck = () => {
     let ifRed = true;
@@ -25,18 +38,16 @@ const MainFooter = () => {
     if (email.length === 0) {
       document.querySelector('.input-email').style.border = '1px solid red';
       ifRed = false;
-    } else {
-      document.querySelector('.input-email').style.border = '1px solid gray'
     }
-
-
+    
     return ifRed;
   }
 
   const sendToFirebase = (e) => {
 
     let answer = inputCheck();
-    if (answer) {
+    let emailCheck = validateEmail()
+    if (answer && emailCheck) {
       const obj = { name, email, message }
       axios.post('contact.json', { obj })
         .then(response => {
