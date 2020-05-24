@@ -29,9 +29,9 @@ const Par = () => {
       navbar.classList.remove("sticky");
     }
   }
-  window.addEventListener('scroll', scrollEvent);
+ 
   useEffect (()  =>  {
-  
+    window.addEventListener('scroll', scrollEvent);
     setArr(ResumeData);
     let date = new Date();
     date.setHours(date.getHours() + 2)
@@ -61,8 +61,6 @@ const Par = () => {
      setModal(ifModal => !ifModal)
   }
 
-
-
   const scrollToDiv = (val) => {
     let obj = document.getElementsByClassName(val)[0];
     window.scrollTo({
@@ -75,13 +73,10 @@ const Par = () => {
       <Stars data={data}  
       scrollToDiv={scrollToDiv}
       />
-    
         <Caro
           data={dataProjects}
           moreImages={moreImages}
         />
-    
-   
         <div className='education-div'>
         <TimeLine education={education} />
         </div>

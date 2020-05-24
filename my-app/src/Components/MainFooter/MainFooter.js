@@ -5,7 +5,7 @@ import './MainFooter.scss'
 import logoGithub from '../../assets/logos/github-icon.svg'
 import logoLinkedin from '../../assets/logos/linkedin-icon.svg'
 import ScrollAnimation from 'react-animate-on-scroll';
-
+import resumeData from '../../ResumeData'
 const MainFooter = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -108,8 +108,7 @@ const MainFooter = () => {
         </div>
         <div className='mainf-sec-col-2'>
           <h3 className='mainf-sec-col-2-title'>Get in Touch</h3>
-          <p className='mainf-sec-col-2-paragraph'>  Whether you want to get in touch, talk about a project collaboration, or just say hi, I'd love to hear from you.
-Simply fill the from and send me an email.</p>
+          <p className='mainf-sec-col-2-paragraph'> {resumeData.sos} </p>
           <div className='mainf-sec-col-2-div-logo'>
             <a target="_blank" href="https://github.com/iDoishere?tab=repositories">
               <img className='mainf-sec-col-2-div-logo-git' alt="smiley" src={logoGithub} />

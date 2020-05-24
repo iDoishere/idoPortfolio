@@ -7,6 +7,8 @@ let resumeData = {
     "phone":"0504832233",
     "email":"idoishere2@gmail.com",
     "roleDescription": "I like dabbling in various parts of frontend development and like to learn about new technologies, write technical articles or simply play games in my free time.",
+          "sos":"Whether you want to get in touch, talk about a project collaboration, or just say hi, I'd love to hear from you.  Simply fill the from and send me an email."  ,
+  
     "socialLinks":[
         {
           "name":"linkedin",
@@ -55,7 +57,6 @@ let resumeData = {
         "role":"FULL-STACK",
         "index":"0",
         "isLive":false,
-        "img":'./assets/images/chatpic.png',
         "Tools":"React ,Redux , MongoDB",
         'logos':[
           {

@@ -1,33 +1,26 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Button, Modal } from 'react-bootstrap';
 import ImageGallery from '../ImageGallery/ImageGallery'
-import './Modal.css'
-class ModalUi extends Component {
-  render() {
-    const {
-      show,
-      close,
-      finalImage,
-      index
 
-    } = this.props;
+
+const  ModalUi = (props) => {
+ 
     return (
       <div >
-        <Modal size="lg" show={show} onHide={close}  >
+        <Modal  size="lg" show={props.show} onHide={props.close}  >
           <Modal.Header    closeButton>
             <Modal.Title>Image Gallery</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-              <ImageGallery finalImage={finalImage} index={index} />                    
+              <ImageGallery finalImage={props.finalImage} index={props.index} />                    
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="secondary" onClick={close}>
+            <Button variant="secondary" onClick={props.close}>
               Close
             </Button>
           </Modal.Footer>
         </Modal>
       </div>
     )
-  }
 }
 export default ModalUi

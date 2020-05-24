@@ -19,16 +19,14 @@ function Caro({ data, moreImages }) {
           return (
               <CaroProject key={index}
                 name={project.name}
-                description={project.description}
-                img={project.imgurl}
-                 role={project.role}
+                description={project.description}       
+                role={project.role}
                 index={project.index}
                 gitLink={project.gitLinkGit}
                 live={project.live}
                 moreImages={(e) => { moreImages(e,index) }}
                 logos={project.logos}
                 isLive={project.isLive}
-                img={project.img}
                 tools={project.Tools}
                 mainImgArray={mainImgArray}
               /> 
