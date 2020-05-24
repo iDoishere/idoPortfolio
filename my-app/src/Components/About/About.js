@@ -2,6 +2,7 @@ import React from 'react'
 import resume from '../../assets/resume.pdf'
 import './About.scss'
 import ScrollAnimation from 'react-animate-on-scroll';
+import resumeData from '../../ResumeData'
 
 function getScrollAnimationLink() {
   return (<ScrollAnimation animateIn="bounceInRight" animateOut="bounceOutLeft">
@@ -13,7 +14,7 @@ function getScrollAnimationLink2() {
       <h4 className="about-title-text">Contact Details</h4>
        </ScrollAnimation>)
 }
-function About({ resumeData }) {
+function About() {
 
   return (
     <div className="about">

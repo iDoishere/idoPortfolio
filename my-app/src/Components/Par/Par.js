@@ -13,7 +13,6 @@ import axios from '../../axios/axios'
 
   
 const Par = () => {
-  const [data, setArr] = useState('');
   const [dataProjects, setArrProjects] = useState([]);
   const [education, setEducationa] = useState([]);
   const [ifModal, setModal] = useState(false);
@@ -32,7 +31,7 @@ const Par = () => {
  
   useEffect (()  =>  {
     window.addEventListener('scroll', scrollEvent);
-    setArr(ResumeData);
+    
     let date = new Date();
     date.setHours(date.getHours() + 2)
     axios.post('people.json', date )
@@ -70,7 +69,7 @@ const Par = () => {
   }
   return (
     <div>
-      <Stars data={data}  
+      <Stars 
       scrollToDiv={scrollToDiv}
       />
         <Caro

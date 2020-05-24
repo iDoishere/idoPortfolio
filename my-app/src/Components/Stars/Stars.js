@@ -52,11 +52,8 @@ export default function Stars({ data, scrollToDiv }) {
           {getScrollAnimationtitle()}  
           {getScrollAnimationdata()}  
           </div>
-         
-
-        
         </div>
-        <About resumeData={data} />
+        <About />
       </div>
     </Aux>
   )

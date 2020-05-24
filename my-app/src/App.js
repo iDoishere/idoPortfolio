@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
-import MainApp from './Container/MainApp/MainApp'
+ import Par from './Components/Par/Par'
+import resumeData from './ResumeData';
 
 function App() {
   return (
- 
-   <MainApp/>
- 
+  
+   <Par  resumeData={resumeData}/>
     
   );
 }
