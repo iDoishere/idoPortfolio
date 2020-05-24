@@ -39,7 +39,6 @@ function TimeLineP({ schoolName, specialization, achievements, time, schoolName2
                   </ScrollAnimation>
                 )
               })
-
               : <p className='achievements'>{achievements}</p>
           }
         </div>

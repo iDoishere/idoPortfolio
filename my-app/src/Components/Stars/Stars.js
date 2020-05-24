@@ -3,8 +3,7 @@ import About from '../About/About'
 import './Stars.scss'
 import ScrollAnimation from 'react-animate-on-scroll';
 
-export default function Stars({ data, scrollToDiv }) {
-
+const Stars =({ data, scrollToDiv }) => {
 
    const Aux  = (props) => {
          return props.children;
@@ -58,6 +57,4 @@ export default function Stars({ data, scrollToDiv }) {
     </Aux>
   )
 }
-
-
-
+export default Stars;

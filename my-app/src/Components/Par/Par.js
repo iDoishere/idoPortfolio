@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-
-  
 import './Par.scss'
 import ResumeData from '../../ResumeData'
 import Caro from '../Caro/Caro'
