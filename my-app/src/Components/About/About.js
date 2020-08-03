@@ -1,5 +1,5 @@
 import React from 'react'
-import resume from '../../assets/resume.pdf'
+import resume from '../../assets/ido.pdf'
 import './About.scss'
 import ScrollAnimation from 'react-animate-on-scroll';
 import resumeData from '../../ResumeData'

@@ -9,14 +9,14 @@ import MainFooter from '../MainFooter/MainFooter'
 import Modal from '../Modal/Modal'
 import axios from '../../axios/axios'
 
-  
+
 const Par = () => {
   const [dataProjects, setArrProjects] = useState([]);
   const [education, setEducationa] = useState([]);
   const [ifModal, setModal] = useState(false);
   const [index, setIndex] = useState(0);
- 
-  
+
+
   const scrollEvent = () => {
     var navbar = document.getElementsByClassName("navbar-off")[0];
     var sticky = navbar.offsetTop;
@@ -26,18 +26,18 @@ const Par = () => {
       navbar.classList.remove("sticky");
     }
   }
- 
-  useEffect (()  =>  {
+
+  useEffect(() => {
     window.addEventListener('scroll', scrollEvent);
-    
+
     let date = new Date();
     date.setHours(date.getHours() + 2)
-    axios.post('people.json', date )
-    .then( response => {
-    })
-    .catch( error => {
-     console.log(error)
-    });
+    axios.post('people.json', date)
+      .then(response => {
+      })
+      .catch(error => {
+        console.log(error)
+      });
   }, [])
 
 
@@ -48,45 +48,48 @@ const Par = () => {
     setEducationa(ResumeData.education)
   }, []);
 
-  const moreImages = (e,updatedIndex) => {
+  const moreImages = (e, updatedIndex) => {
     e.preventDefault()
     setModal(ifModal => !ifModal)
     setIndex(index => updatedIndex);
   }
 
   const handleClose = () => {
-     setModal(ifModal => !ifModal)
+    setModal(ifModal => !ifModal)
   }
 
   const scrollToDiv = (val) => {
     let obj = document.getElementsByClassName(val)[0];
     window.scrollTo({
       behavior: "smooth",
-      top: obj.offsetTop 
+      top: obj.offsetTop
     });
   }
   return (
     <div>
-      <Stars 
-      scrollToDiv={scrollToDiv}
+      <Stars
+        scrollToDiv={scrollToDiv}
       />
+      <div className='projects-div'>
         <Caro
           data={dataProjects}
           moreImages={moreImages}
         />
-        <div className='education-div'>
+      </div>
+
+      <div className='education-div'>
         <TimeLine education={education} />
-        </div>
+      </div>
       {ifModal ? <Modal
         index={index}
         close={handleClose}
         show={ifModal}
       />
         : ''}
-           <div className="contact-div">
-           <MainFooter/>
-           </div> 
-       <ScrollUp /> 
+      <div className="contact-div">
+        <MainFooter />
+      </div>
+      <ScrollUp />
     </div>
   )
 }
