@@ -32,12 +32,12 @@ const Par = () => {
 
     let date = new Date();
     date.setHours(date.getHours() + 2)
-    axios.post('people.json', date)
-      .then(response => {
-      })
-      .catch(error => {
-        console.log(error)
-      });
+    // axios.post('people.json', date)
+    //   .then(response => {
+    //   })
+    //   .catch(error => {
+    //     console.log(error)
+    //   });
   }, [])
 
 

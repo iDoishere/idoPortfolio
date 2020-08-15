@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import axios from '../../axios/axios'
+import apiClient from '../../axios/axios'
 import './MainFooter.scss'
 import logoGithub from '../../assets/logos/github-icon.svg'
 import logoLinkedin from '../../assets/logos/linkedin-icon.svg'
@@ -49,23 +49,28 @@ const MainFooter = () => {
     let emailCheck = validateEmail()
     if (answer && emailCheck) {
       const obj = { name, email, message }
-      axios.post('contact.json', { obj })
-        .then(response => {
-          if (response.status === 200) {
-            setHidden(true)
-            var loader = document.querySelector('.loader'),
-              check = document.querySelector('.check');
-            loader.classList.add('active');
-            loader.addEventListener('animationend', function () {
-              check.classList.add('active');
-            });
-          }
-        })
-        .catch(error => {
-          var answer = document.querySelector('.user-answer');
-          answer.style.color = 'red'
-          answer.innerText = 'server issues'
-        })
+
+
+      apiClient.sendToFire(obj)
+      .then(res => {
+        if (res.status === 200) {
+          setHidden(true)
+          var loader = document.querySelector('.loader'),
+            check = document.querySelector('.check');
+          loader.classList.add('active');
+          loader.addEventListener('animationend', function () {
+            check.classList.add('active');
+          });
+          setTimeout(()=> {
+            loader.classList.remove('active');
+            check.classList.remove('active');
+          },5000)
+        }
+      }).catch(error => {
+        var answer = document.querySelector('.user-answer');
+        answer.style.color = 'red'
+        answer.innerText = 'server issues'
+      })
     }
   }
 

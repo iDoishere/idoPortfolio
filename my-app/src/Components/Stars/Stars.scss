@@ -61,7 +61,7 @@
 &-a:active,
 &-a.active {
   text-decoration: none;
-  color: rgba(179, 152, 152, 0.85);
+  color: white
 }
 &-a::after {
   transform-origin: initial;
@@ -69,12 +69,13 @@
   display: block;
   width: 0;
   height: 2px;
-  background:  rgba(179, 152, 152, 0.85);
+  background:  white
+  
 }
 
 &-a:hover::after {
   transform-origin: initial;
-    width: 49px;
+  width: 100%;
      transition: ease-in-out .6s;
   }
 }

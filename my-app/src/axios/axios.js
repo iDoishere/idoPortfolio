@@ -1,6 +1,18 @@
 
 const axios = require('axios');
-const instance = axios.create({
+const apiClient = axios.create({
     baseURL:'https://portfolioido.firebaseio.com/'
 })
-export default instance;
+ 
+
+export default {
+       sendToFire : (obj) => {    
+        return apiClient.post('contact.json', { obj })
+        .catch(err => {
+        return err;
+    })
+    }
+}
+
+
+ 
